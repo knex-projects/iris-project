@@ -1,0 +1,32 @@
+.headerContainer {
+  background-color: var(--cor-preto);
+  height: 9rem;
+  padding: 0 10.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  color: var(--cor-branco);
+}
+
+.navContainer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navText {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.buttonContact {
+  background-color: var(--cor-rosa);
+  color: var(--cor-branco);
+  font-size: 20px;
+  height: 2.8rem;
+  width: 7.25rem;
+  border-radius: 15px;
+  border: none;
+  font-weight: 600;
+}
