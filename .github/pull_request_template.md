@@ -1,10 +1,11 @@
 ## Descrição
 
 - Adicione uma descrição do que foi feito neste PR. Exemplo:
+
   - **Funcionalidade:** Descrição da funcionalidade implementada.
   - **Correções:** Descrição do bug corrigido.
 
-responder com ( '✅' ou '❌' )
+- responder com ( '✅' ou '❌' )
 
 ## Tipo de alteração:
 
