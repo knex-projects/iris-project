@@ -1,23 +1,33 @@
 .headerContainer {
   background-color: var(--cor-preto);
   height: 9rem;
-  padding: 0 10.25rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: row;
   color: var(--cor-branco);
 }
 
-.navContainer {
+.sidebarContainer {
+  background-color: var(--cor-preto);
+  color: var(--cor-branco);
+  top: 9rem;
+}
+
+.navContent {
   display: flex;
-  align-items: center;
-  gap: 1rem;
+  gap: 2rem;
+}
+
+.buttonNav {
+  background-color: var(--cor-rosa);
+  color: var(--cor-branco);
+  font-size: 20px;
+  font-weight: 500;
+  width: 116px;
+  height: 46px;
 }
 
 .navText {
   font-weight: 500;
   font-size: 20px;
+  color: var(--cor-branco);
 }
 
 .buttonContact {
