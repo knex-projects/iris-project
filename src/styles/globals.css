@@ -29,6 +29,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+button {
+  font-family: var(--font-poppins);
+}
+
 * {
   box-sizing: border-box;
   padding: 0;

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Poppins, Playfair_Display_SC } from "next/font/google";
-import "./globals.css";
+import "../styles/globals.css";
 
 const playfairDisplay = Playfair_Display_SC({
   weight: "700",
