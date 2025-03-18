@@ -17,7 +17,6 @@ import {
 import styles from "../styles/components/Header.module.css";
 
 function Header() {
-  const menuItems = ["Conheça a Íris", "Cases", "Soluções", "Processos"];
   return (
     <Navbar className={styles.headerContainer} disableAnimation isBordered>
       <NavbarContent className="sm:hidden" justify="start">
@@ -70,13 +69,36 @@ function Header() {
       </NavbarContent>
 
       <NavbarMenu className={styles.sidebarContainer}>
-        {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`}>
-            <Link className={`${styles.navText} w-full`} href="#" size="lg">
-              {item}
-            </Link>
-          </NavbarMenuItem>
-        ))}
+        <NavbarMenuItem>
+          <Link className={`${styles.navText} mb-3 w-full`} href="#" size="lg">
+            Conheça a Íris
+          </Link>
+        </NavbarMenuItem>
+        <NavbarMenuItem>
+          <Link className={`${styles.navText} mb-3 w-full`} href="#" size="lg">
+            Cases
+          </Link>
+        </NavbarMenuItem>
+        <NavbarMenuItem>
+          <Link className={`${styles.navText} mb-3 w-full`} href="#" size="lg">
+            Soluções
+          </Link>
+        </NavbarMenuItem>
+        <NavbarMenuItem>
+          <Link className={`${styles.navText} mb-3 w-full`} href="#" size="lg">
+            Processos
+          </Link>
+        </NavbarMenuItem>
+        <NavbarItem>
+          <Button
+            className={styles.buttonNav}
+            as={Link}
+            href="#"
+            variant="flat"
+          >
+            Contato
+          </Button>
+        </NavbarItem>
       </NavbarMenu>
     </Navbar>
   );
