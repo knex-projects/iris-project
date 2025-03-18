@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Poppins, Playfair_Display_SC } from "next/font/google";
 import "../styles/globals.css";
 
+import { HeroUIProvider } from "@heroui/react";
+
 const playfairDisplay = Playfair_Display_SC({
   weight: "700",
   style: "normal",
@@ -27,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={`${playfairDisplay.className} ${poppins.className}`}>
-        {children}
+        <HeroUIProvider>{children}</HeroUIProvider>
       </body>
     </html>
   );
