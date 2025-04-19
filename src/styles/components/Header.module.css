@@ -2,6 +2,8 @@
   background-color: var(--cor-preto);
   height: 9rem;
   color: var(--cor-branco);
+  position: fixed;
+  top: 0;
 }
 
 .sidebarContainer {

@@ -1,0 +1,74 @@
+.appContainer {
+  padding-top: 9rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #000; /* Fallback se imagem não carregar */
+}
+
+.appHeroContainer {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.appHeroImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  filter: brightness(0.4); /* escurece para contraste com o texto */
+}
+
+.appHeroTitle {
+  position: relative;
+  z-index: 2;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: white;
+  max-width: 80%;
+  line-height: 1.4;
+}
+
+.appHeroTitle span {
+  color: #4d57ff; /* azul para "100%" */
+}
+
+.appHeroButtons {
+  position: relative;
+  z-index: 2;
+  margin-top: 2rem;
+  display: flex;
+  gap: 1.5rem;
+}
+/* 
+.appHeroButtons button,
+.appHeroButtons a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #000;
+  border: 1px solid #fff;
+  padding: 0.75rem 1.5rem;
+  color: #fff;
+  border-radius: 999px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+} */
+
+/* .appHeroButtons button:hover,
+.appHeroButtons a:hover {
+  background-color: #4d57ff;
+  border-color: #4d57ff;
+  color: #fff;
+} */
