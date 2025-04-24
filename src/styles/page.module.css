@@ -118,3 +118,37 @@
   user-select: none;
   opacity: 0.8;
 }
+
+@media (max-width: 768px) {
+  .heroUnderlineImg {
+    display: none;
+  }
+
+  .appHeroButtons > :nth-child(2) {
+    order: -1; /* Coloca o botão 'Conheça mais' em primeiro */
+  }
+
+  .appHeroButtons > :nth-child(1) {
+    order: 1;
+  }
+
+  .appHeroButtons > :nth-child(3) {
+    order: 2;
+  }
+}
+@media (max-width: 480px) {
+  .heroUnderlineImg {
+    display: none;
+  }
+
+  .heroDecorImg {
+    top: -30%;
+    left: 5%;
+  }
+
+  .appHeroButtons button,
+  .appHeroButtons a,
+  .appHeroButtons icon {
+    font-size: 20px;
+  }
+}
