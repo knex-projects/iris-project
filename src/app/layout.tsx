@@ -4,7 +4,7 @@ import "../styles/globals.css";
 
 import { HeroUIProvider } from "@heroui/react";
 
-const playfairDisplay = Playfair_Display_SC({
+export const playfairDisplay = Playfair_Display_SC({
   weight: "700",
   style: "normal",
   subsets: ["latin"],
