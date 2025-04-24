@@ -39,10 +39,6 @@
   line-height: 1.4;
 }
 
-.appHeroTitle span {
-  color: #4d57ff; /* azul para "100%" */
-}
-
 .appHeroButtons {
   position: relative;
   z-index: 2;
@@ -50,25 +46,75 @@
   display: flex;
   gap: 1.5rem;
 }
-/* 
+
 .appHeroButtons button,
 .appHeroButtons a {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
   background-color: #000;
-  border: 1px solid #fff;
-  padding: 0.75rem 1.5rem;
+  border: 1px solid #63636340;
   color: #fff;
-  border-radius: 999px;
-  font-weight: 500;
-  text-decoration: none;
-  transition: all 0.3s ease;
-} */
+}
 
-/* .appHeroButtons button:hover,
-.appHeroButtons a:hover {
-  background-color: #4d57ff;
-  border-color: #4d57ff;
-  color: #fff;
-} */
+.heroHighlight {
+  color: #4d61b7;
+}
+
+.heroDecoration {
+  position: relative;
+  display: inline-block;
+}
+
+.heroLineBelow {
+  position: absolute;
+  left: 0;
+  bottom: 0.25rem; /* Ajuste fino aqui */
+  height: auto;
+  pointer-events: none;
+  user-select: none;
+  z-index: -1;
+}
+
+.heroUnderlineWrapper {
+  position: relative;
+  display: inline-block;
+  padding: 0 2rem;
+  overflow: visible;
+}
+
+.heroUnderlineText {
+  position: relative;
+  z-index: 1;
+}
+
+.heroUnderlineImg {
+  position: absolute;
+  bottom: 25%;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: -1;
+  opacity: 0.8;
+  pointer-events: none;
+  user-select: none;
+}
+
+.heroDecorWrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.heroDecorText {
+  position: relative;
+  z-index: 1;
+}
+
+.heroDecorImg {
+  position: absolute;
+  top: -55%;
+  left: -10%;
+  width: 60px;
+  height: auto;
+  z-index: -1;
+  pointer-events: none;
+  user-select: none;
+  opacity: 0.8;
+}
