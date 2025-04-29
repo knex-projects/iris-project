@@ -16,6 +16,7 @@ export default function Home() {
     <div className={styles.appContainer}>
       <Header />
 
+      {/* Hero */}
       <div className={styles.appHeroContainer}>
         <Image
           src={ImageHero}
@@ -63,6 +64,23 @@ export default function Home() {
             <Linkedin size={24} />
           </Button>
         </div>
+      </div>
+
+      {/* Success stories */}
+      <div className={styles.appSuccessContainer}>
+        <div className={styles.appSuccessTitle}>
+          <h1>Casos de sucesso</h1>
+          <p>Alguns dos nossos casos projetos realizados.</p>
+        </div>
+
+        <div className={styles.appSuccessContent}></div>
+
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita aut
+          sint dolor magnam suscipit aperiam fugit, deserunt voluptatibus
+          corporis saepe distinctio aliquid tempore quaerat excepturi, iure
+          nobis perferendis quas numquam?
+        </p>
       </div>
     </div>
   );
