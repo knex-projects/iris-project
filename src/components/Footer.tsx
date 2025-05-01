@@ -23,7 +23,7 @@ return(
     <div className=" ">
         <h1 className={styles.h1Text}>Entre em contato</h1>
         <h1 className={styles.h3Text}>Whatsapp</h1>
-        <h1 className={styles.h4Text}>(83) 99193-2955</h1>
+        <a href="https://wa.me/5583991932955?text=Olá%2C%20gostaria%20de%20mais%20informações"><h1 className={styles.h4Text}>(83) 99193-2955</h1></a>
     </div>
     </div>
     <h3 className={styles.h5Text}>© 2025 Iris. Todos os direitos reservados.</h3>
