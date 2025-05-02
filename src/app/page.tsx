@@ -10,6 +10,7 @@ import decorTraits from "../../public/images/decorTraits.png";
 import ImageHero from "../../public/images/Fundo.png";
 
 import styles from "@/styles/page.module.css";
+import { Footer } from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -64,6 +65,7 @@ export default function Home() {
           </Button>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 }
