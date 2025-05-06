@@ -8,8 +8,10 @@ import { ExternalLink, Instagram, Linkedin } from "lucide-react";
 import decorLines from "../../public/images/decorLines.png";
 import decorTraits from "../../public/images/decorTraits.png";
 import ImageHero from "../../public/images/Fundo.png";
+import logo from "../../public/images/logo.png";
 
 import styles from "@/styles/page.module.css";
+import SuccessCaseCard from "@/components/SuccessCaseCard";
 
 export default function Home() {
   return (
@@ -69,17 +71,22 @@ export default function Home() {
       {/* Success stories */}
       <div className={styles.appSuccessContainer}>
         <div className={styles.appSuccessTitle}>
-          <h1>Casos de sucesso</h1>
+          <h1 className={`${playfairDisplay.className}`}>Casos de sucesso</h1>
           <p>Alguns dos nossos casos projetos realizados.</p>
         </div>
 
-        <div className={styles.appSuccessContent}></div>
+        <div className={styles.appSuccessContent}>
+          <SuccessCaseCard logo={logo} name="IRIS" isActive />
+          <SuccessCaseCard logo={logo} name="IRIS" isActive />
+          <SuccessCaseCard logo={logo} name="IRIS" isActive />
+        </div>
 
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita aut
-          sint dolor magnam suscipit aperiam fugit, deserunt voluptatibus
-          corporis saepe distinctio aliquid tempore quaerat excepturi, iure
-          nobis perferendis quas numquam?
+        <p className={styles.appSuccessDescription}>
+          A Íris Comunicação Integrada, a agência é especializada em comunicação
+          pública, organizacional e corporativa, trabalhando com o conceito de
+          comunicação integrada e geração de conteúdo. A Íris valoriza a
+          responsabilidade socioambiental e utiliza metodologias participativas
+          em seus projetos.
         </p>
       </div>
     </div>
