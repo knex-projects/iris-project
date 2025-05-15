@@ -3,11 +3,22 @@ import Header from "@/components/Header";
 import Image from "next/image";
 import { Button } from "@heroui/react";
 import { playfairDisplay } from "./layout";
-import { ExternalLink, Instagram, Linkedin } from "lucide-react";
+import {
+  Calendar,
+  Camera,
+  ExternalLink,
+  IdCard,
+  Instagram,
+  Linkedin,
+  MessageCircleMore,
+  Smartphone,
+} from "lucide-react";
 
 import decorLines from "../../public/images/decorLines.png";
 import decorTraits from "../../public/images/decorTraits.png";
 import ImageHero from "../../public/images/Fundo.png";
+import yellowLine from "../../public/images/yellowLine.svg";
+import megaphone from "../../public/images/megaphone.svg";
 
 import styles from "@/styles/page.module.css";
 import { Footer } from "@/components/Footer";
@@ -65,7 +76,79 @@ export default function Home() {
           </Button>
         </div>
       </div>
-      <Footer/>
+      <section className={styles.solucoesContainer}>
+        <h2
+          className={`${styles.SolucoesSubTitulo}  ${playfairDisplay.className}`}
+        >
+          Serviços que proporcionamos.{" "}
+        </h2>
+        <h1
+          className={`${styles.SolucoesTitulo}  ${playfairDisplay.className}`}
+        >
+          <Image src={megaphone} width={140} height={140} alt="megaphone" className={styles.megaphoneImage}/> 
+          Nossas Soluções
+          <Image src={yellowLine} width={453} height={10} alt="yellowLine" className={styles.SolucoesTituloImage}/>
+        </h1>
+      
+        <div className={styles.solucoesContainerCard}>
+          <div className={styles.solucoesCard}>
+            <Calendar color="#FCC837" size={40} />
+            <h1 className={styles.soluçoesCardTitulo}>Cobertura de Evento</h1>
+            <div className={styles.solucoesLine}></div>
+            <h2 className={styles.soluçoesCardText}>
+              Captamos cada momento de um jeito que faz a diferença, em tempo
+              real para não perder nenhum detalhe do seu momento especial.
+            </h2>
+          </div>
+          <div className={styles.solucoesCard}>
+            <MessageCircleMore color="#FCC837" size={40} />
+            <h1 className={styles.soluçoesCardTitulo}>
+              Consultoria em comunicação
+            </h1>
+            <div className={styles.solucoesLine}></div>
+            <h2 className={styles.soluçoesCardText}>
+              Captamos cada momento de um jeito que faz a diferença, em tempo
+              real para não perder nenhum detalhe do seu momento especial.
+            </h2>
+          </div>
+          <div className={styles.solucoesCard}>
+            <>
+              <Camera color="#FCC837" size={40} />
+              <h1 className={styles.soluçoesCardTitulo}>
+                Captação de Fotos e Vídeos
+              </h1>
+            </>
+            <div className={styles.solucoesLine}></div>
+            <h2 className={styles.soluçoesCardText}>
+              Fotos e vídeos que contam sua história de verdade. Seja para sua
+              marca, ou para um momento pessoal, estamos à disposição!
+            </h2>
+          </div>
+          <div className={styles.solucoesCard}>
+            <></>
+            <IdCard color="#FCC837" size={40} />
+            <h1 className={styles.soluçoesCardTitulo}>Identidade Visual</h1>
+            <div className={styles.solucoesLine}></div>
+            <h2 className={styles.soluçoesCardText}>
+              Sua marca merece um visual único e marcante. Se destacar e ser
+              reconhecido no mercado é o objetivo central aqui!
+            </h2>
+          </div>
+          <div className={styles.solucoesCard}>
+            <Smartphone color="#FCC837" size={40} />
+            <h1 className={styles.soluçoesCardTitulo}>
+              Conteúdo para as redes sociais
+            </h1>
+            <div className={styles.solucoesLine}></div>
+            <h2 className={styles.soluçoesCardText}>
+              Estar nas redes é mais do que postar: é construir presença.
+              Montaremos estratégias voltadas especialmente para sua empresa se
+              destacar no mercado!
+            </h2>
+          </div>
+        </div>
+      </section>
+      <Footer />
     </div>
   );
 }
