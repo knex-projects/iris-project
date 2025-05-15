@@ -2,7 +2,6 @@ import Header from "@/components/Header";
 import Image from "next/image";
 import { Button } from "@heroui/react";
 import { playfairDisplay } from "./layout";
-import { ExternalLink, Instagram, Linkedin } from "lucide-react";
 
 import {
   Calendar,
@@ -27,9 +26,9 @@ import megaphone from "../../public/images/megaphone.svg";
 
 import styles from "@/styles/page.module.css";
 import SuccessCaseCard from "@/components/SuccessCaseCard";
+import { Footer } from "@/components/Footer";
 
 export default function Home() {
-
   return (
     <div className={styles.appContainer}>
       <Header />
@@ -123,11 +122,23 @@ export default function Home() {
         <h1
           className={`${styles.SolucoesTitulo}  ${playfairDisplay.className}`}
         >
-          <Image src={megaphone} width={140} height={140} alt="megaphone" className={styles.megaphoneImage}/> 
+          <Image
+            src={megaphone}
+            width={140}
+            height={140}
+            alt="megaphone"
+            className={styles.megaphoneImage}
+          />
           Nossas Soluções
-          <Image src={yellowLine} width={453} height={10} alt="yellowLine" className={styles.SolucoesTituloImage}/>
+          <Image
+            src={yellowLine}
+            width={453}
+            height={10}
+            alt="yellowLine"
+            className={styles.SolucoesTituloImage}
+          />
         </h1>
-      
+
         <div className={styles.solucoesContainerCard}>
           <div className={styles.solucoesCard}>
             <Calendar color="#FCC837" size={40} />
@@ -186,6 +197,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+
       <Footer />
     </div>
   );
