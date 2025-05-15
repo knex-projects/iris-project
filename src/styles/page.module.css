@@ -3,7 +3,6 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #000;
 }
 
 .appHeroContainer {
@@ -119,6 +118,64 @@
   opacity: 0.8;
 }
 
+.appSuccessContainer {
+  height: 100vh;
+  padding: 9.5rem 10.5rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.appSuccessContent {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.appSuccessTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.appSuccessTitle h1 {
+  font-size: 48px;
+  position: relative;
+  z-index: 1;
+}
+
+.appSuccessStribble {
+  position: absolute;
+  z-index: 0;
+  bottom: 0.25rem;
+}
+
+.appSuccessTitle p {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.appSuccessDescription {
+  text-align: justify;
+  font-size: 16px;
+  font-weight: 400;
+  position: relative;
+  margin-top: 3rem;
+  padding-top: 2rem;
+}
+
+.appSuccessDescription::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 2px;
+  background-color: #000;
+}
+
 @media (max-width: 768px) {
   .heroUnderlineImg {
     display: none;
@@ -150,6 +207,12 @@
   .appHeroButtons a,
   .appHeroButtons icon {
     font-size: 20px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .appSuccessContainer {
+    padding: 9.5rem 24rem;
   }
 }
 
