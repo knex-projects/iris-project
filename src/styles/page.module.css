@@ -120,7 +120,7 @@
 
 .appSuccessContainer {
   height: 100vh;
-  padding: 9.5rem 10.5rem;
+  padding: 9.5rem 10.5rem 2.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -141,6 +141,14 @@
 }
 .appSuccessTitle h1 {
   font-size: 48px;
+  position: relative;
+  z-index: 1;
+}
+
+.appSuccessStribble {
+  position: absolute;
+  z-index: 0;
+  bottom: 0.25rem;
 }
 
 .appSuccessTitle p {

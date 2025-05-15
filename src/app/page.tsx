@@ -1,12 +1,13 @@
 import Header from "@/components/Header";
-// import {Image} from "@heroui/react";
 import Image from "next/image";
 import { Button } from "@heroui/react";
 import { playfairDisplay } from "./layout";
 import { ExternalLink, Instagram, Linkedin } from "lucide-react";
+// import useEmblaCarousel from "embla-carousel-react";
 
 import decorLines from "../../public/images/decorLines.png";
 import decorTraits from "../../public/images/decorTraits.png";
+import scribbleLine from "../../public/images/scribble.svg";
 import ImageHero from "../../public/images/Fundo.png";
 import logo from "../../public/images/logo.png";
 
@@ -14,6 +15,8 @@ import styles from "@/styles/page.module.css";
 import SuccessCaseCard from "@/components/SuccessCaseCard";
 
 export default function Home() {
+  // const [emblaRef] = useEmblaCarousel();
+
   return (
     <div className={styles.appContainer}>
       <Header />
@@ -71,11 +74,19 @@ export default function Home() {
       {/* Success stories */}
       <div className={styles.appSuccessContainer}>
         <div className={styles.appSuccessTitle}>
-          <h1 className={`${playfairDisplay.className}`}>Casos de sucesso</h1>
+          <h1 className={`${playfairDisplay.className}`}>
+            Casos de sucesso
+            <Image
+              className={styles.appSuccessStribble}
+              src={scribbleLine}
+              alt="Risco de decoração do titulo."
+            />
+          </h1>
+
           <p>Alguns dos nossos casos projetos realizados.</p>
         </div>
 
-        <div className={styles.appSuccessContent}>
+        <div className={`embla ${styles.appSuccessContent}`}>
           <SuccessCaseCard logo={logo} name="IRIS" isActive />
           <SuccessCaseCard logo={logo} name="IRIS" isActive />
           <SuccessCaseCard logo={logo} name="IRIS" isActive />
