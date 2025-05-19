@@ -228,16 +228,31 @@ export default function Home() {
             className={styles.brilhoTopo}
             alt="imagens de decoração"
           />
-          <Image
-            src={secadorBrilhoDireita}
-            className={styles.secadorDireita}
-            alt="imagens de decoração"
-          />
-          <Image
-            src={secadorBrilhoEsquerda}
-            className={styles.secadorEsquerda}
-            alt="imagens de decoração"
-          />
+          <div className={styles.secadorWapperDireita}>
+            <Image
+              src={secadorBrilhoDireita}
+              className={styles.secadorDireita}
+              alt="imagens de decoração"
+            />
+            <Image
+              className={styles.blur}
+              src={blur}
+              alt="imagens de decoração"
+            />
+          </div>
+
+          <div className={styles.secadorWapperEsquerda}>
+            <Image
+              src={secadorBrilhoEsquerda}
+              className={styles.secadorEsquerda}
+              alt="imagens de decoração"
+            />
+            <Image
+              className={styles.blur}
+              src={blur}
+              alt="imagens de decoração"
+            />
+          </div>
 
           <ContactForm />
         </div>

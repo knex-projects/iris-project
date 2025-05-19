@@ -315,28 +315,37 @@
   padding: 2rem;
 }
 
-.secadorEsquerda,
-.blurEsqueda {
+.secadorWapperDireita {
   position: absolute;
-  top: 30%;
-  left: -15%;
-  width: 10%;
+  bottom: 10%;
+  right: -45%;
   z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.secadorWapperEsquerda {
+  position: absolute;
+  top: 10%;
+  left: -45%;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.secadorDireita {
+  position: absolute;
+  width: 15%;
+  filter: drop-shadow(0 0 10px var(--cor-rosa));
+}
+.secadorEsquerda {
+  position: absolute;
+  width: 15%;
+  filter: drop-shadow(0 0 10px var(--cor-rosa));
 }
 
-.secadorDireita,
-.blurDireita {
-  position: absolute;
-  bottom: 30%;
-  right: -15%;
-  width: 10%;
-  z-index: 1;
-}
-
-.blurDireita,
-.blurEsquerda {
-  width: 50%;
-  z-index: 0;
+.blur {
+  z-index: -1;
 }
 
 .brilhoTopo {
