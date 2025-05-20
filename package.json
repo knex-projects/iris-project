@@ -16,11 +16,15 @@
     "next": "15.2.2",
     "nodemailer": "^6.10.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-hook-form": "^7.56.4",
+    "react-hot-toast": "^2.5.2",
+    "react-imask": "^7.6.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@types/node": "^20",
+    "@types/nodemailer": "^6.4.17",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "autoprefixer": "^10.4.21",

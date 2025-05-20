@@ -18,15 +18,20 @@ import decorLines from "../../public/images/decorLines.png";
 import decorTraits from "../../public/images/decorTraits.png";
 import scribbleLine from "../../public/images/scribble.svg";
 import ImageHero from "../../public/images/Fundo.png";
-
 import logo from "../../public/images/logo.png";
-
 import yellowLine from "../../public/images/yellowLine.svg";
+import pinkLine from "../../public/images/pinkLine.svg";
 import megaphone from "../../public/images/megaphone.svg";
+import BrilhoFundo from "../../public/images/formBrilhoFundo.svg";
+import BrilhoTopo from "../../public/images/formBrilhoTopo.svg";
+import secadorBrilhoDireita from "../../public/images/secadorBrilhoDireita.svg";
+import secadorBrilhoEsquerda from "../../public/images/secadorBrilhoEsquerda.svg";
+import blur from "../../public/images/blur.svg";
 
 import styles from "@/styles/page.module.css";
 import SuccessCaseCard from "@/components/SuccessCaseCard";
 import { Footer } from "@/components/Footer";
+import ContactForm from "@/components/ContactForm";
 
 export default function Home() {
   return (
@@ -195,6 +200,61 @@ export default function Home() {
               destacar no mercado!
             </h2>
           </div>
+        </div>
+      </section>
+
+      <section className={styles.formContactContainer}>
+        <div className={styles.formContactTitle}>
+          <h1 className={`${playfairDisplay.className}`}>
+            Agilize sua solicitação!
+          </h1>
+
+          <p>sua marca merece destaque</p>
+          <Image
+            className={styles.formContatStribble}
+            src={pinkLine}
+            alt="Risco de decoração do titulo."
+          />
+        </div>
+
+        <div className={styles.formContactContent}>
+          <Image
+            src={BrilhoFundo}
+            className={styles.brilhoFundo}
+            alt="imagens de decoração"
+          />
+          <Image
+            src={BrilhoTopo}
+            className={styles.brilhoTopo}
+            alt="imagens de decoração"
+          />
+          <div className={styles.secadorWapperDireita}>
+            <Image
+              src={secadorBrilhoDireita}
+              className={styles.secadorDireita}
+              alt="imagens de decoração"
+            />
+            <Image
+              className={styles.blur}
+              src={blur}
+              alt="imagens de decoração"
+            />
+          </div>
+
+          <div className={styles.secadorWapperEsquerda}>
+            <Image
+              src={secadorBrilhoEsquerda}
+              className={styles.secadorEsquerda}
+              alt="imagens de decoração"
+            />
+            <Image
+              className={styles.blur}
+              src={blur}
+              alt="imagens de decoração"
+            />
+          </div>
+
+          <ContactForm />
         </div>
       </section>
 

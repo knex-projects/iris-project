@@ -133,16 +133,27 @@
   gap: 4rem;
 }
 
-.appSuccessTitle {
+.appSuccessTitle,
+.formContactTitle {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
-.appSuccessTitle h1 {
+
+.formContactTitle {
+  position: relative;
+  color: var(--cor-branco);
+}
+.appSuccessTitle h1,
+.formContactTitle h1 {
   font-size: 48px;
   position: relative;
   z-index: 1;
+}
+
+.formContactTitle h1 {
+  position: initial;
 }
 
 .appSuccessStribble {
@@ -151,7 +162,14 @@
   bottom: 0.25rem;
 }
 
-.appSuccessTitle p {
+.formContatStribble {
+  position: absolute;
+  z-index: 0;
+  bottom: -0.5rem;
+}
+
+.appSuccessTitle p,
+.formContactTitle p {
   font-weight: 400;
   font-size: 14px;
 }
@@ -176,6 +194,175 @@
   background-color: #000;
 }
 
+.solucoesContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 100%;
+  background-color: #1b1b1b;
+  padding-top: 20vw;
+  padding-bottom: 15vw;
+  padding-left: 30px;
+  padding-right: 20px;
+  text-align: center;
+}
+
+.megaphoneImage {
+  visibility: hidden;
+  position: absolute;
+  bottom: 50%;
+  left: 70lvw;
+}
+
+.SolucoesTitulo {
+  position: relative;
+  width: 1112px;
+  font-size: 3rem;
+  color: #dddddd;
+  font-weight: 700;
+  max-width: 100%;
+  line-height: 1;
+  padding-bottom: 2.5cap;
+}
+.SolucoesTituloImage {
+  position: absolute;
+  top: 2em;
+  left: 2vh;
+  right: 4vh;
+  width: 250px;
+  height: 26px;
+}
+
+.SolucoesSubTitulo {
+  width: 1112px;
+  font-size: 1rem;
+  color: #dddddd;
+  font-weight: 400;
+  max-width: 100%;
+}
+
+.solucoesContainerCard {
+  display: grid;
+  width: 100%;
+  place-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+
+  gap: 1.5rem;
+}
+
+.solucoesCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-top: 22px;
+  align-items: center;
+  width: 200px;
+  height: 306px;
+  border-radius: 10px;
+  border-width: 1px;
+  border-color: #434343;
+}
+
+.soluçoesCardTitulo {
+  position: absolute;
+  top: 22%;
+  width: 165px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  line-height: 20px;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #dddddd;
+}
+
+.soluçoesCardText {
+  position: absolute;
+  top: 45%;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 0.75rem;
+  color: #dddddd;
+  width: 145px;
+}
+
+.solucoesLine {
+  position: absolute;
+  top: 40%;
+  width: 116px;
+  height: 2px;
+  background-color: #fcc837;
+}
+
+.formContactContainer {
+  height: 125vh;
+  padding: 9.5rem 10.5rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--cor-preto);
+  gap: 5rem;
+  border-bottom: 1px solid var(--cor-cinza);
+  border-top: 1px solid var(--cor-cinza);
+}
+
+.formContactContent {
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.secadorWapperDireita {
+  position: absolute;
+  bottom: 10%;
+  right: -45%;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.secadorWapperEsquerda {
+  position: absolute;
+  top: 10%;
+  left: -45%;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.secadorDireita {
+  position: absolute;
+  width: 15%;
+  filter: drop-shadow(0 0 10px var(--cor-rosa));
+}
+.secadorEsquerda {
+  position: absolute;
+  width: 15%;
+  filter: drop-shadow(0 0 10px var(--cor-rosa));
+}
+
+.blur {
+  z-index: -1;
+}
+
+.brilhoTopo {
+  position: absolute;
+  top: -5%;
+  right: -10%;
+  width: 15%;
+  z-index: 0;
+}
+
+.brilhoFundo {
+  position: absolute;
+  bottom: -5%;
+  left: -10%;
+  width: 15%;
+  z-index: 0;
+}
 @media (max-width: 768px) {
   .heroUnderlineImg {
     display: none;
@@ -216,144 +403,32 @@
   }
 }
 
-.solucoesContainer{
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: auto;
-  width: 100%;
-  background-color:#1B1B1B ;
-  padding-top: 20vw;
-  padding-bottom:  15vw;
-  padding-left: 30px;
-  padding-right: 20px;
-  text-align: center;
-}
-
-.megaphoneImage{
-  visibility: hidden;
-  position: absolute;
-  bottom: 50%;
-  left: 70lvw;
-}
-
-.SolucoesTitulo{
-  position: relative;
-  width: 1112px; 
-  font-size: 3rem;
-  color:#DDDDDD ;
-  font-weight: 700;
-  max-width: 100%;
-  line-height: 1;
-  padding-bottom: 2.5cap;
-
- 
-}
-.SolucoesTituloImage{
-    position: absolute;
-    top: 2em;
-    left: 2vh;
-    right: 4vh;
-    width: 250px;
-    height: 26px;
-  }
-
-.SolucoesSubTitulo{
-  width: 1112px;
-  font-size: 1rem;
-  color:#DDDDDD ;
-  font-weight: 400;
-  max-width: 100%;
-   
-  
-}
-
-.solucoesContainerCard{
-  display: grid;
-  width: 100%;
-  place-items: center;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
- 
-  gap: 1.5rem;
-}
-
-.solucoesCard{
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  padding-top: 22px;
-  align-items: center;
-  width:200px ;
-  height: 306px;
-  border-radius: 10px;
-  border-width: 1px;
-  border-color: #434343 ;
- 
-}
-
-
-
-.soluçoesCardTitulo{
-  position: absolute;
-  top: 22%;
-  width: 165px;
-  text-align: center;
- font-family: "Poppins", sans-serif;
- line-height: 20px;
- font-weight: 400;
- font-size: 1rem;
- color: #DDDDDD;
-}
-
-.soluçoesCardText{
-position: absolute;
-top: 45%;
- font-family: "Poppins", sans-serif;
- font-weight: 400;
- font-size: 0.75rem;
- color: #DDDDDD;
- width: 145px ;
-}
-
-.solucoesLine{
-  position:absolute;
-  top: 40%;
-  width: 116px;
-  height: 2px;
-  background-color: #FCC837;
-}
-
 @media (min-width: 1440px) {
-    .solucoesContainer{
-      height: 669px;
-      padding-top: 0;
-      padding-bottom: 0;
-    }
-    .solucoesContainerCard{
-      display: flex;
-      flex-direction: row;
-      width: 1112px;
-      
-
+  .solucoesContainer {
+    height: 669px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .solucoesContainerCard {
+    display: flex;
+    flex-direction: row;
+    width: 1112px;
+  }
 }
-    
- }
- @media (min-width: 490px) {
-   .SolucoesTituloImage{
+@media (min-width: 490px) {
+  .SolucoesTituloImage {
     position: absolute;
     top: 0.8em;
     left: 0;
     width: 461px;
   }
-  
-.solucoesContainer{
-  text-align: start;
+
+  .solucoesContainer {
+    text-align: start;
+  }
+  .megaphoneImage {
+    position: absolute;
+    bottom: 80%;
+    left: 12cap;
+  }
 }
-.megaphoneImage{
-  position: absolute;
-  bottom: 80%;
-  left: 12cap;
-}
- }

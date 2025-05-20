@@ -3,6 +3,7 @@ import { Poppins, Playfair_Display_SC } from "next/font/google";
 import "../styles/globals.css";
 
 import { HeroUIProvider } from "@heroui/react";
+import { Toaster } from "react-hot-toast";
 
 export const playfairDisplay = Playfair_Display_SC({
   weight: "700",
@@ -29,7 +30,10 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={`${playfairDisplay.className} ${poppins.className}`}>
-        <HeroUIProvider>{children}</HeroUIProvider>
+        <HeroUIProvider>
+          <Toaster position="bottom-right" />
+          {children}
+        </HeroUIProvider>
       </body>
     </html>
   );
