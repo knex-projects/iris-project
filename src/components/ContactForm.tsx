@@ -4,6 +4,8 @@ import { useForm, Controller } from "react-hook-form";
 import { IMaskInput } from "react-imask";
 import styles from "../styles/components/ContactForm.module.css";
 
+import toast from "react-hot-toast";
+
 type FormData = {
   nome: string;
   sobrenome: string;
@@ -24,15 +26,28 @@ export default function ContactForm() {
   } = useForm<FormData>();
 
   const onSubmit = async (data: FormData) => {
-    const res = await fetch("/api/send-email", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
-    });
+    const toastId = toast.loading("Enviando...");
 
-    const result = await res.json();
-    alert(result.message);
-    if (res.ok) reset();
+    try {
+      const res = await fetch("/api/send-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      const result = await res.json();
+
+      if (res.ok) {
+        toast.success("E-mail enviado com sucesso!", { id: toastId });
+        reset();
+      } else {
+        toast.error(result.error || "Erro ao enviar o e-mail.", {
+          id: toastId,
+        });
+      }
+    } catch {
+      toast.error("Erro inesperado no envio.", { id: toastId });
+    }
   };
 
   return (
@@ -89,11 +104,14 @@ export default function ContactForm() {
               <IMaskInput
                 mask="(00) 00000-0000"
                 {...field}
+                inputRef={field.ref}
+                onAccept={(value) => field.onChange(value)}
                 className={styles.input}
                 placeholder="(99) 99999-9999"
               />
             )}
           />
+
           {errors.telefone1 && (
             <span className={styles.error}>Campo obrigatório</span>
           )}
@@ -110,6 +128,8 @@ export default function ContactForm() {
               <IMaskInput
                 mask="(00) 00000-0000"
                 {...field}
+                inputRef={field.ref}
+                onAccept={(value) => field.onChange(value)}
                 className={styles.input}
                 placeholder="(99) 99999-9999"
               />
