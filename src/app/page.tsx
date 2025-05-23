@@ -14,6 +14,8 @@ import {
   Smartphone,
 } from "lucide-react";
 
+import StribbleYellow from "../../public/images/StribbleYellow.svg"
+import scribbleLine2 from "../../public/images/scribbleLine2.svg"
 import decorLines from "../../public/images/decorLines.png";
 import decorTraits from "../../public/images/decorTraits.png";
 import scribbleLine from "../../public/images/scribble.svg";
@@ -27,7 +29,7 @@ import BrilhoTopo from "../../public/images/formBrilhoTopo.svg";
 import secadorBrilhoDireita from "../../public/images/secadorBrilhoDireita.svg";
 import secadorBrilhoEsquerda from "../../public/images/secadorBrilhoEsquerda.svg";
 import blur from "../../public/images/blur.svg";
-
+import ImageHeroMobile from "../../public/fundoMobile.svg"
 import styles from "@/styles/page.module.css";
 import SuccessCaseCard from "@/components/SuccessCaseCard";
 import { Footer } from "@/components/Footer";
@@ -44,6 +46,11 @@ export default function Home() {
           src={ImageHero}
           alt="Imagem de fundo."
           className={styles.appHeroImage}
+        />
+         <Image
+          src={ImageHeroMobile}
+          alt="Imagem de fundo."
+          className={styles.appHeroImage2}
         />
         <h1 className={`${styles.appHeroTitle} ${playfairDisplay.className}`}>
           <div className={styles.heroDecorWrapper}>
@@ -66,7 +73,7 @@ export default function Home() {
           <br />
           com DNA <span className={styles.heroHighlight}>100%</span>{" "}
           <span className={styles.heroDecoration}>
-            DIGITAL.
+            INOVADOR.
             <Image
               src={decorLines}
               alt="Traço decorativo"
@@ -76,11 +83,10 @@ export default function Home() {
         </h1>
 
         <div className={styles.appHeroButtons}>
-          <Button isIconOnly radius="sm">
+           <Button isIconOnly radius="sm">
             <Instagram size={24} />
           </Button>
-          <Button radius="sm" endContent={<ExternalLink size={18} />}>
-            Conheça mais
+           <Button className={styles.appHeroButtonText} radius="sm" endContent={<ExternalLink size={18} />}>
           </Button>
           <Button isIconOnly radius="sm">
             <Linkedin size={24} />
@@ -90,12 +96,19 @@ export default function Home() {
 
       {/* Success stories */}
       <div className={styles.appSuccessContainer}>
+        <h1 className={`${playfairDisplay.className} ${styles.appSuccessTitle2} `}>
+            Nossos Casos</h1>
         <div className={styles.appSuccessTitle}>
           <h1 className={`${playfairDisplay.className}`}>
             Casos de sucesso
             <Image
               className={styles.appSuccessStribble}
               src={scribbleLine}
+              alt="Risco de decoração do titulo."
+            />
+            <Image
+              className={styles.appSuccessStribble2}
+              src={scribbleLine2}
               alt="Risco de decoração do titulo."
             />
           </h1>
@@ -135,16 +148,25 @@ export default function Home() {
             className={styles.megaphoneImage}
           />
           Nossas Soluções
-          <Image
+          <div className={styles.SolucoesTituloImage}> <Image
+            fill
             src={yellowLine}
-            width={453}
-            height={10}
             alt="yellowLine"
-            className={styles.SolucoesTituloImage}
+            sizes="(min-width: 490px) 26vw, 9vw"
+            
+          /></div>
+          <Image 
+            className={styles.SolucoesTituloStribble}
+            src={StribbleYellow}
+            alt="yellowLine"
+            sizes="(min-width: 490px) 26vw, 9vw"
+            
           />
+         
         </h1>
 
         <div className={styles.solucoesContainerCard}>
+
           <div className={styles.solucoesCard}>
             <Calendar color="#FCC837" size={40} />
             <h1 className={styles.soluçoesCardTitulo}>Cobertura de Evento</h1>

@@ -27,6 +27,9 @@
   z-index: 1;
   filter: brightness(0.8);
 }
+.appHeroImage2 {
+  position: absolute;
+}
 
 .appHeroTitle {
   position: relative;
@@ -44,6 +47,10 @@
   margin-top: 2rem;
   display: flex;
   gap: 1.5rem;
+}
+
+.appHeroButtonText::before {
+  content: "Conheça mais";
 }
 
 .appHeroButtons button,
@@ -119,8 +126,8 @@
 }
 
 .appSuccessContainer {
-  height: 100vh;
-  padding: 9.5rem 10.5rem 2.5rem;
+  height: 954px;
+  padding: 9.5rem 10.5rem 8rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -133,8 +140,7 @@
   gap: 4rem;
 }
 
-.appSuccessTitle,
-.formContactTitle {
+.appSuccessTitle {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -144,6 +150,11 @@
 .formContactTitle {
   position: relative;
   color: var(--cor-branco);
+}
+
+.appSuccessTitle2 {
+  position: absolute;
+  visibility: hidden;
 }
 .appSuccessTitle h1,
 .formContactTitle h1 {
@@ -157,6 +168,12 @@
 }
 
 .appSuccessStribble {
+  position: absolute;
+  z-index: 0;
+  bottom: 0.25rem;
+}
+.appSuccessStribble2 {
+  visibility: hidden;
   position: absolute;
   z-index: 0;
   bottom: 0.25rem;
@@ -176,11 +193,17 @@
 
 .appSuccessDescription {
   text-align: justify;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 400;
+  width: 1112px;
   position: relative;
-  margin-top: 3rem;
-  padding-top: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+
+.appSuccessStribble2 {
+  visibility: visible;
+  position: relative;
 }
 
 .appSuccessDescription::before {
@@ -211,49 +234,65 @@
 }
 
 .megaphoneImage {
-  visibility: hidden;
   position: absolute;
-  bottom: 50%;
-  left: 70lvw;
+  bottom: 80%;
+  left: 8.5em;
 }
 
 .SolucoesTitulo {
   position: relative;
   width: 1112px;
-  font-size: 3rem;
   color: #dddddd;
   font-weight: 700;
   max-width: 100%;
   line-height: 1;
+  text-align: start;
+  font-size: 48px;
+  color: #dddddd;
+
   padding-bottom: 2.5cap;
 }
 .SolucoesTituloImage {
   position: absolute;
-  top: 2em;
-  left: 2vh;
-  right: 4vh;
-  width: 250px;
+  top: 0.8em;
+  left: 0;
+  width: 461px;
   height: 26px;
 }
+ .SolucoesTituloStribble {
+     visibility: hidden;
+      position: absolute;
+ }
 
 .SolucoesSubTitulo {
   width: 1112px;
   font-size: 1rem;
   color: #dddddd;
   font-weight: 400;
-  max-width: 100%;
+  text-align: start;
 }
 
 .solucoesContainerCard {
   display: grid;
   width: 100%;
   place-items: center;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  font-family: "Poppins", sans-serif;
+  width: 1112px;
+  font-size: 16px;
+  color: #dddddd;
+  font-weight: 400;
+}
 
+.solucoesContainerCard {
+  display: flex;
+  flex-direction: row;
+  width: 80vw;
+  overflow-x: scroll;
   gap: 1.5rem;
 }
 
 .solucoesCard {
+  flex-shrink: 0;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -297,7 +336,7 @@
 }
 
 .formContactContainer {
-  height: 125vh;
+  height: 120vh;
   padding: 9.5rem 10.5rem 2.5rem;
   display: flex;
   flex-direction: column;
@@ -363,39 +402,6 @@
   width: 15%;
   z-index: 0;
 }
-@media (max-width: 768px) {
-  .heroUnderlineImg {
-    display: none;
-  }
-
-  .appHeroButtons > :nth-child(2) {
-    order: -1; /* Coloca o botão 'Conheça mais' em primeiro */
-  }
-
-  .appHeroButtons > :nth-child(1) {
-    order: 1;
-  }
-
-  .appHeroButtons > :nth-child(3) {
-    order: 2;
-  }
-}
-@media (max-width: 480px) {
-  .heroUnderlineImg {
-    display: none;
-  }
-
-  .heroDecorImg {
-    top: -30%;
-    left: 5%;
-  }
-
-  .appHeroButtons button,
-  .appHeroButtons a,
-  .appHeroButtons icon {
-    font-size: 20px;
-  }
-}
 
 @media (min-width: 1920px) {
   .appSuccessContainer {
@@ -413,14 +419,185 @@
     display: flex;
     flex-direction: row;
     width: 1112px;
+    overflow: hidden;
   }
 }
-@media (min-width: 490px) {
-  .SolucoesTituloImage {
+
+@media (max-width: 1200px) {
+  .SolucoesTitulo {
+    width: 85%;
+  }
+  .SolucoesSubTitulo {
+    width: 85%;
+  }
+}
+
+@media (max-width: 949px) {
+
+  .appSuccessDescription {
+  font-size: 12px;
+  }
+  .appSuccessContent {
+    width: 80vw;
+    overflow-x: scroll;
+    padding-left: 3rem;
+  }
+  .formContactContainer {
+    padding: 0 0 0;
+    width: 100%;
+    height: 50%;
+    gap: 2rem;
+  }
+  .formContactContent {
+    padding-top: 0;
+  }
+  .formContactTitle {
+    padding-top: 5vh;
+    gap: 2rem;
+    padding-bottom: 0;
+    display: grid;
+    place-self: center;
+    text-align: center;
+    width: 310px;
+  }
+  .formContactTitle h1 {
+    font-size: 36px;
+    width: 310px;
+    height: 73px;
+  }
+
+  .formContatStribble {
+    width: 250px;
+    place-self: center;
+  }
+
+  .brilhoTopo {
+    visibility: hidden;
+  }
+
+  .brilhoFundo {
+    visibility: hidden;
+  }
+
+  .formContactContent {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .appHeroContainer {
+    height: 643px;
+  }
+  .appHeroTitle {
+    font-size: 42px;
+    line-height: 42px;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroUnderlineImg {
+    display: none;
+  }
+
+
+  .SolucoesTitulo {
+    font-size: 32px;
+  }
+  .SolucoesSubTitulo {
+    font-size: 11px;
+    font-style: italic;
+  }
+
+  .appSuccessDescription {
+    display: grid;
+    place-self: center;
+    text-align: justify;
+    font-size: 12px;
+    padding-top: 0, 5rem;
+    margin-top: 0;
+    width: 70vw;
+  }
+}
+
+@media (max-width: 490px) {
+  .heroUnderlineImg {
+    display: none;
+  }
+
+  .appHeroButtonText::before {
+    content: "Conheça a Irís";
+  }
+  .appHeroImage {
+    visibility: hidden;
+  }
+  .appHeroImage2 {
     position: absolute;
-    top: 0.8em;
+    top: 0;
     left: 0;
-    width: 461px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    filter: brightness(0.8);
+  }
+
+  .heroDecorImg {
+    top: -30%;
+    left: 5%;
+  }
+
+  .appHeroButtons button,
+  .appHeroButtons a,
+  .appHeroButtons icon {
+    font-size: 20px;
+  
+  }
+
+  .appHeroButtons button{
+    height: 58px;
+    min-width: 56px;
+  }
+  .appHeroButtons{
+    padding-bottom: 5rem;
+  }
+
+.appHeroButtons a{
+  width: 56px;
+}
+
+  .appHeroTitle{
+    padding-bottom: 7rem;
+  }
+
+
+  .appSuccessStribble {
+    visibility: hidden;
+  }
+
+  .appSuccessStribble2 {
+    visibility: visible;
+    width: 12.28px;
+    height: 9px;
+    position: absolute;
+    bottom: 3.5rem;
+    left: 4rem;
+  }
+
+  .appSuccessTitle {
+    visibility: hidden;
+    position: absolute;
+  }
+
+  .SolucoesTituloStribble {
+     visibility: visible;
+      position: absolute;
+    width: 12.28px;
+    height: 9px;
+    bottom: 1.5em;
+    left: 0;
+  }
+
+  .SolucoesTituloImage {
+    visibility: hidden;
   }
 
   .solucoesContainer {
@@ -428,7 +605,53 @@
   }
   .megaphoneImage {
     position: absolute;
-    bottom: 80%;
-    left: 12cap;
+    bottom: 59%;
+    left: 9.2em;
+    width: 37.59px;
+    height: 35.27px;
+  }
+  .SolucoesSubTitulo {
+    width: 85%;
+  }
+  .appSuccessTitle2 {
+    flex-shrink: 0;
+    display: flex;
+    place-self: center;
+    text-align: start;
+    position: relative;
+    visibility: visible;
+    width: 300px;
+    font-size: 36px;
+    font-weight: 700;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .appSuccessTitle {
+    visibility: hidden;
+    position: absolute;
+  }
+
+   .appSuccessDescription {
+     width: 360px;
+  }
+  .appSuccessContainer {
+    height: 610px;
+    width: 430px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .solucoesContainer {
+    height: 669px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .solucoesContainerCard {
+    display: flex;
+    flex-direction: row;
+    width: 1112px;
   }
 }
