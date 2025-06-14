@@ -2,16 +2,21 @@ import Header from "@/components/Header";
 import Image from "next/image";
 import { Button } from "@heroui/react";
 import { playfairDisplay } from "./layout";
-
 import {
   Calendar,
   Camera,
   ExternalLink,
+  FileSignature,
+  FileText,
+  Flame,
   IdCard,
   Instagram,
   Linkedin,
   MessageCircleMore,
+  PlayCircle,
   Smartphone,
+  Stethoscope,
+  UserCheck,
 } from "lucide-react";
 
 import StribbleYellow from "../../public/images/StribbleYellow.svg"
@@ -19,9 +24,10 @@ import scribbleLine2 from "../../public/images/scribbleLine2.svg"
 import decorLines from "../../public/images/decorLines.png";
 import decorTraits from "../../public/images/decorTraits.png";
 import scribbleLine from "../../public/images/scribble.svg";
-import ImageHero from "../../public/images/Fundo.png";
+import ImageHero from "../../public/images/Fundo.svg";
 import logo from "../../public/images/logo.png";
 import yellowLine from "../../public/images/yellowLine.svg";
+import orangeLine from "../../public/images/orangeLine.svg";
 import pinkLine from "../../public/images/pinkLine.svg";
 import megaphone from "../../public/images/megaphone.svg";
 import BrilhoFundo from "../../public/images/formBrilhoFundo.svg";
@@ -29,7 +35,9 @@ import BrilhoTopo from "../../public/images/formBrilhoTopo.svg";
 import secadorBrilhoDireita from "../../public/images/secadorBrilhoDireita.svg";
 import secadorBrilhoEsquerda from "../../public/images/secadorBrilhoEsquerda.svg";
 import blur from "../../public/images/blur.svg";
-import ImageHeroMobile from "../../public/fundoMobile.svg"
+import ImageHeroMobile from "../../public/fundoMobile.svg"import camera from "../../public/images/camera.svg";
+import arrow from "../../public/images/arrow.svg";
+import arrowCurved from "../../public/images/arrowCurved.svg";
 import styles from "@/styles/page.module.css";
 import SuccessCaseCard from "@/components/SuccessCaseCard";
 import { Footer } from "@/components/Footer";
@@ -83,14 +91,26 @@ export default function Home() {
         </h1>
 
         <div className={styles.appHeroButtons}>
-           <Button isIconOnly radius="sm">
-            <Instagram size={24} />
+           <button className={styles.iconButton}>
+            <span className={styles.iconContent}>
+              <span className={styles.iconFade}>
+                <Instagram size={24} />
+              </span>
+              <span className={styles.iconLabel}>Instagram</span>
+            </span>
+          </button>
+ 
+          <Button className={styles.appHeroButtonText} radius="sm" endContent={<ExternalLink size={18} />}>
           </Button>
-           <Button className={styles.appHeroButtonText} radius="sm" endContent={<ExternalLink size={18} />}>
-          </Button>
-          <Button isIconOnly radius="sm">
-            <Linkedin size={24} />
-          </Button>
+
+          <button className={styles.iconButton}>
+            <span className={styles.iconContent}>
+              <span className={styles.iconFade}>
+                <Linkedin size={24} />
+              </span>
+              <span className={styles.iconLabel}>LinkedIn</span>
+            </span>
+          </button>
         </div>
       </div>
 
@@ -131,6 +151,7 @@ export default function Home() {
         </p>
       </div>
 
+      {/* Soluções */}
       <section className={styles.solucoesContainer}>
         <h2
           className={`${styles.SolucoesSubTitulo}  ${playfairDisplay.className}`}
@@ -224,7 +245,105 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {/*Nossos processos*/}
+      <section className={styles.processContainer}>
+        <div className={styles.processColumn}>
+          <div className={styles.appSuccessTitle}>
+            <h1 className={`${playfairDisplay.className}`}>
+              Nossos processos
+              <Image
+                className={styles.appSuccessStribble}
+                src={orangeLine}
+                alt="Risco de decoração do titulo."
+              />
+            </h1>
 
+            <p>Alguns dos nossos casos projetos realizados.</p>
+          </div>
+          <div className={styles.processWrapper}>
+            {/* Etapa Inicial */}
+            <div className={styles.cardProcess}>
+              <h2>Etapa Inicial</h2>
+              <div className={styles.stepContainer}>
+                <div className={styles.step}>
+                  <PlayCircle className={styles.stepIcon} />
+                  <div className={styles.stepTitle}>Primeiro Contato</div>
+                  <p className={styles.stepDescription}>
+                    Vamos ter nossa primeira conversa via mensagem ou ligação!
+                  </p>
+                </div>
+                <div className={styles.step}>
+                  <Stethoscope className={styles.stepIcon} />
+                  <div className={styles.stepTitle}>Reunião de Diagnóstico</div>
+                  <p className={styles.stepDescription}>
+                    Aqui vamos entender com mais precisão como podemos efetuar
+                    nossa parceria!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* Etapa Íris */}
+          <div className={styles.processWrapper}>
+            <div className={styles.cardProcess}>
+              <h2>Etapa Íris</h2>
+              <div className={styles.stepContainer}>
+                <div className={styles.step}>
+                  <Flame className={styles.stepIcon} />
+                  <div className={styles.stepTitle}>Execução</div>
+                  <p className={styles.stepDescription}>
+                    Colocar a mão na massa é o que amamos fazer!
+                  </p>
+                </div>
+                <div className={styles.step}>
+                  <UserCheck className={styles.stepIcon} />
+                  <div className={styles.stepTitle}>Acompanhamento</div>
+                  <p className={styles.stepDescription}>
+                    Estaremos em contato durante todo o projeto para te entregar
+                    nossa qualidade de ponta!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className={styles.processArrows}>
+          <Image
+            className={styles.processArrows}
+            src={arrowCurved}
+            alt="Seta curva decorativa"
+          />
+          <Image
+            className={styles.processArrows}
+            src={arrow}
+            alt="Seta decorativa"
+          />
+        </div>
+        {/* Etapa Contratual */}
+        <div className={styles.processColumn}>
+          <div className={styles.cardProcess}>
+            <h2>Etapa Contratual</h2>
+            <div className={styles.stepContainer}>
+              <div className={styles.step}>
+                <FileSignature className={styles.stepIcon} />
+                <div className={styles.stepTitle}>Proposta</div>
+                <p className={styles.stepDescription}>
+                  Hora de apresentar uma proposta exclusiva para você com os
+                  nossos serviços!
+                </p>
+              </div>
+              <div className={styles.step}>
+                <FileText className={styles.stepIcon} />
+                <div className={styles.stepTitle}>Contrato</div>
+                <p className={styles.stepDescription}>
+                  Aqui vamos oficializar nossa parceria de maneira formal!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* Formulário de contato */}
       <section className={styles.formContactContainer}>
         <div className={styles.formContactTitle}>
           <h1 className={`${playfairDisplay.className}`}>
@@ -276,6 +395,18 @@ export default function Home() {
             />
           </div>
 
+          <div className={styles.secadorWapperEsquerda}>
+            <Image
+              src={secadorBrilhoEsquerda}
+              className={styles.secadorEsquerda}
+              alt="imagens de decoração"
+            />
+            <Image
+              className={styles.blur}
+              src={blur}
+              alt="imagens de decoração"
+            />
+          </div>
           <ContactForm />
         </div>
       </section>
