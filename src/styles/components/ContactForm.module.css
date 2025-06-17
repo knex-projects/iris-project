@@ -2,7 +2,6 @@
   background-color: #1a1a1a;
   padding: 48px 32px;
   border-radius: 16px;
-  width: 624px;
   margin: 0 auto;
   color: white;
   display: flex;
@@ -65,28 +64,4 @@
   color: #ff5c5c;
   font-size: 12px;
   margin-top: 4px;
-}
-
-@media(max-width: 600px){
-.form{
-  width: 85%;
-  height: 690px;
-}
-
-.row{
-  gap:35px
-}
-.row input {
-  display: flex;
-  width: 100%;
-}
-
-
-
-}
-
-@media(max-width:390px){
-  .form{
-    font-size: 3.5vw;
-  }
 }
