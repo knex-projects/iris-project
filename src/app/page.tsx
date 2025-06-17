@@ -14,6 +14,8 @@ import {
   Smartphone,
 } from "lucide-react";
 
+import StribbleYellow from "../../public/images/StribbleYellow.svg"
+import scribbleLine2 from "../../public/images/scribbleLine2.svg"
 import decorLines from "../../public/images/decorLines.png";
 import decorTraits from "../../public/images/decorTraits.png";
 import scribbleLine from "../../public/images/scribble.svg";
@@ -27,11 +29,16 @@ import BrilhoTopo from "../../public/images/formBrilhoTopo.svg";
 import secadorBrilhoDireita from "../../public/images/secadorBrilhoDireita.svg";
 import secadorBrilhoEsquerda from "../../public/images/secadorBrilhoEsquerda.svg";
 import blur from "../../public/images/blur.svg";
-
+import ImageHeroMobile from "../../public/fundoMobile.svg"
 import styles from "@/styles/page.module.css";
 import SuccessCaseCard from "@/components/SuccessCaseCard";
 import { Footer } from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
+import laptop from "../../public/images/laptop.svg";
+import phone from "../../public/images/phone.svg";
+import olhos from "../../public/images/olhos.svg";
+import novaPaylogo from "../../public/images/novaPayLogo.svg";
+import greenSolutionLogo from "../../public/images/GreenSolutionsLogo.svg";
 
 export default function Home() {
   return (
@@ -44,6 +51,11 @@ export default function Home() {
           src={ImageHero}
           alt="Imagem de fundo."
           className={styles.appHeroImage}
+        />
+         <Image
+          src={ImageHeroMobile}
+          alt="Imagem de fundo."
+          className={styles.appHeroImage2}
         />
         <h1 className={`${styles.appHeroTitle} ${playfairDisplay.className}`}>
           <div className={styles.heroDecorWrapper}>
@@ -66,7 +78,7 @@ export default function Home() {
           <br />
           com DNA <span className={styles.heroHighlight}>100%</span>{" "}
           <span className={styles.heroDecoration}>
-            DIGITAL.
+            INOVADOR.
             <Image
               src={decorLines}
               alt="Traço decorativo"
@@ -76,11 +88,10 @@ export default function Home() {
         </h1>
 
         <div className={styles.appHeroButtons}>
-          <Button isIconOnly radius="sm">
+           <Button isIconOnly radius="sm">
             <Instagram size={24} />
           </Button>
-          <Button radius="sm" endContent={<ExternalLink size={18} />}>
-            Conheça mais
+           <Button className={styles.appHeroButtonText} radius="sm" endContent={<ExternalLink size={18} />}>
           </Button>
           <Button isIconOnly radius="sm">
             <Linkedin size={24} />
@@ -90,6 +101,9 @@ export default function Home() {
 
       {/* Success stories */}
       <div className={styles.appSuccessContainer}>
+        <h1 className={`${playfairDisplay.className} ${styles.appSuccessTitle2} `}>
+            Nossos Casos
+             </h1>
         <div className={styles.appSuccessTitle}>
           <h1 className={`${playfairDisplay.className}`}>
             Casos de sucesso
@@ -98,15 +112,26 @@ export default function Home() {
               src={scribbleLine}
               alt="Risco de decoração do titulo."
             />
+            <Image
+              className={styles.appSuccessStribble2}
+              src={scribbleLine2}
+              alt="Risco de decoração do titulo."
+            />
+             <Image
+          src={olhos}
+          alt="Imagem de fundo."
+          className={styles.appSuccessImage}
+        />
           </h1>
 
           <p>Alguns dos nossos casos projetos realizados.</p>
         </div>
 
         <div className={`embla ${styles.appSuccessContent}`}>
+        
           <SuccessCaseCard logo={logo} name="IRIS" isActive />
-          <SuccessCaseCard logo={logo} name="IRIS" isActive />
-          <SuccessCaseCard logo={logo} name="IRIS" isActive />
+          <SuccessCaseCard logo={novaPaylogo} name="IRIS" isActive />
+          <SuccessCaseCard logo={greenSolutionLogo} name="IRIS" isActive />
         </div>
 
         <p className={styles.appSuccessDescription}>
@@ -118,6 +143,7 @@ export default function Home() {
         </p>
       </div>
 
+       {/* soluçoes */}
       <section className={styles.solucoesContainer}>
         <h2
           className={`${styles.SolucoesSubTitulo}  ${playfairDisplay.className}`}
@@ -135,16 +161,25 @@ export default function Home() {
             className={styles.megaphoneImage}
           />
           Nossas Soluções
-          <Image
+          <div className={styles.SolucoesTituloImage}> <Image
+            fill
             src={yellowLine}
-            width={453}
-            height={10}
             alt="yellowLine"
-            className={styles.SolucoesTituloImage}
+            sizes="(min-width: 490px) 26vw, 9vw"
+            
+          /></div>
+          <Image 
+            className={styles.SolucoesTituloStribble}
+            src={StribbleYellow}
+            alt="yellowLine"
+            sizes="(min-width: 490px) 26vw, 9vw"
+            
           />
+         
         </h1>
 
         <div className={styles.solucoesContainerCard}>
+
           <div className={styles.solucoesCard}>
             <Calendar color="#FCC837" size={40} />
             <h1 className={styles.soluçoesCardTitulo}>Cobertura de Evento</h1>
@@ -203,7 +238,10 @@ export default function Home() {
         </div>
       </section>
 
+        {/* form */}
       <section className={styles.formContactContainer}>
+
+
         <div className={styles.formContactTitle}>
           <h1 className={`${playfairDisplay.className}`}>
             Agilize sua solicitação!
@@ -228,6 +266,34 @@ export default function Home() {
             className={styles.brilhoTopo}
             alt="imagens de decoração"
           />
+
+           <Image
+            src={laptop}
+            width={215}
+            height={215}
+            alt="laptop"
+            className={styles.formlaptopImage}
+          />
+          <Image
+            src={phone}
+            width={178}
+            height={178}
+            alt="phone"
+            className={styles.formphoneImage}
+          />
+          <div className={styles.secadorWapperEsquerda}>
+            <Image
+              src={secadorBrilhoEsquerda}
+              className={styles.secadorEsquerda}
+              alt="imagens de decoração"
+            />
+            <Image
+              className={styles.blur}
+              src={blur}
+              alt="imagens de decoração"
+            />
+          </div>
+
           <div className={styles.secadorWapperDireita}>
             <Image
               src={secadorBrilhoDireita}
@@ -241,7 +307,8 @@ export default function Home() {
             />
           </div>
 
-          <div className={styles.secadorWapperEsquerda}>
+
+          <div className={styles.secadorWapperEsquerda2}>
             <Image
               src={secadorBrilhoEsquerda}
               className={styles.secadorEsquerda}
@@ -253,6 +320,20 @@ export default function Home() {
               alt="imagens de decoração"
             />
           </div>
+          
+          <div className={styles.secadorWapperBase}>
+            <Image
+              src={secadorBrilhoEsquerda}
+              className={styles.secadorEsquerda}
+              alt="imagens de decoração"
+            />
+            <Image
+              className={styles.blur}
+              src={blur}
+              alt="imagens de decoração"
+            />
+          </div>
+          
 
           <ContactForm />
         </div>

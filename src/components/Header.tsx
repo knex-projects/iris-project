@@ -19,7 +19,7 @@ import styles from "../styles/components/Header.module.css";
 function Header() {
   return (
     <Navbar className={styles.headerContainer} disableAnimation isBordered>
-      <NavbarContent className="sm:hidden" justify="start">
+      <NavbarContent className="sm:hidden sm:absolute" justify="start">
         <NavbarMenuToggle />
       </NavbarContent>
 
@@ -29,7 +29,7 @@ function Header() {
         </NavbarBrand>
       </NavbarContent>
 
-      <NavbarContent className="hidden sm:flex">
+      <NavbarContent className="hidden sm:flex"  justify="start">
         <NavbarBrand>
           <Image src={ImageLogo} alt="Logo Iris" />
         </NavbarBrand>
