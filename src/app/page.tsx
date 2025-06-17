@@ -34,6 +34,11 @@ import styles from "@/styles/page.module.css";
 import SuccessCaseCard from "@/components/SuccessCaseCard";
 import { Footer } from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
+import laptop from "../../public/images/laptop.svg";
+import phone from "../../public/images/phone.svg";
+import olhos from "../../public/images/olhos.svg";
+import novaPaylogo from "../../public/images/novaPayLogo.svg";
+import greenSolutionLogo from "../../public/images/GreenSolutionsLogo.svg";
 
 export default function Home() {
   return (
@@ -97,7 +102,8 @@ export default function Home() {
       {/* Success stories */}
       <div className={styles.appSuccessContainer}>
         <h1 className={`${playfairDisplay.className} ${styles.appSuccessTitle2} `}>
-            Nossos Casos</h1>
+            Nossos Casos
+             </h1>
         <div className={styles.appSuccessTitle}>
           <h1 className={`${playfairDisplay.className}`}>
             Casos de sucesso
@@ -111,15 +117,21 @@ export default function Home() {
               src={scribbleLine2}
               alt="Risco de decoração do titulo."
             />
+             <Image
+          src={olhos}
+          alt="Imagem de fundo."
+          className={styles.appSuccessImage}
+        />
           </h1>
 
           <p>Alguns dos nossos casos projetos realizados.</p>
         </div>
 
         <div className={`embla ${styles.appSuccessContent}`}>
+        
           <SuccessCaseCard logo={logo} name="IRIS" isActive />
-          <SuccessCaseCard logo={logo} name="IRIS" isActive />
-          <SuccessCaseCard logo={logo} name="IRIS" isActive />
+          <SuccessCaseCard logo={novaPaylogo} name="IRIS" isActive />
+          <SuccessCaseCard logo={greenSolutionLogo} name="IRIS" isActive />
         </div>
 
         <p className={styles.appSuccessDescription}>
@@ -131,6 +143,7 @@ export default function Home() {
         </p>
       </div>
 
+       {/* soluçoes */}
       <section className={styles.solucoesContainer}>
         <h2
           className={`${styles.SolucoesSubTitulo}  ${playfairDisplay.className}`}
@@ -225,7 +238,10 @@ export default function Home() {
         </div>
       </section>
 
+        {/* form */}
       <section className={styles.formContactContainer}>
+
+
         <div className={styles.formContactTitle}>
           <h1 className={`${playfairDisplay.className}`}>
             Agilize sua solicitação!
@@ -250,6 +266,34 @@ export default function Home() {
             className={styles.brilhoTopo}
             alt="imagens de decoração"
           />
+
+           <Image
+            src={laptop}
+            width={215}
+            height={215}
+            alt="laptop"
+            className={styles.formlaptopImage}
+          />
+          <Image
+            src={phone}
+            width={178}
+            height={178}
+            alt="phone"
+            className={styles.formphoneImage}
+          />
+          <div className={styles.secadorWapperEsquerda}>
+            <Image
+              src={secadorBrilhoEsquerda}
+              className={styles.secadorEsquerda}
+              alt="imagens de decoração"
+            />
+            <Image
+              className={styles.blur}
+              src={blur}
+              alt="imagens de decoração"
+            />
+          </div>
+
           <div className={styles.secadorWapperDireita}>
             <Image
               src={secadorBrilhoDireita}
@@ -263,7 +307,8 @@ export default function Home() {
             />
           </div>
 
-          <div className={styles.secadorWapperEsquerda}>
+
+          <div className={styles.secadorWapperEsquerda2}>
             <Image
               src={secadorBrilhoEsquerda}
               className={styles.secadorEsquerda}
@@ -275,6 +320,20 @@ export default function Home() {
               alt="imagens de decoração"
             />
           </div>
+          
+          <div className={styles.secadorWapperBase}>
+            <Image
+              src={secadorBrilhoEsquerda}
+              className={styles.secadorEsquerda}
+              alt="imagens de decoração"
+            />
+            <Image
+              className={styles.blur}
+              src={blur}
+              alt="imagens de decoração"
+            />
+          </div>
+          
 
           <ContactForm />
         </div>

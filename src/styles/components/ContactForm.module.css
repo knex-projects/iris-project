@@ -81,4 +81,12 @@
   width: 100%;
 }
 
+
+
+}
+
+@media(max-width:390px){
+  .form{
+    font-size: 3.5vw;
+  }
 }

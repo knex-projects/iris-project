@@ -8,7 +8,7 @@
 .appHeroContainer {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 700px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -201,6 +201,12 @@
   padding-bottom: 2rem;
 }
 
+ .appSuccessImage{
+    position: absolute;
+    right: 120%;
+    top: -85%;
+  }
+
 .appSuccessStribble2 {
   visibility: visible;
   position: relative;
@@ -223,13 +229,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: auto;
+  height: 669px;
   width: 100%;
   background-color: #1b1b1b;
-  padding-top: 20vw;
-  padding-bottom: 15vw;
-  padding-left: 30px;
-  padding-right: 20px;
   text-align: center;
 }
 
@@ -241,7 +243,7 @@
 
 .SolucoesTitulo {
   position: relative;
-  width: 1112px;
+  width: 80%;
   color: #dddddd;
   font-weight: 700;
   max-width: 100%;
@@ -265,7 +267,7 @@
  }
 
 .SolucoesSubTitulo {
-  width: 1112px;
+  width: 80%;
   font-size: 1rem;
   color: #dddddd;
   font-weight: 400;
@@ -273,23 +275,19 @@
 }
 
 .solucoesContainerCard {
-  display: grid;
-  width: 100%;
-  place-items: center;
+  display: flex;
   font-family: "Poppins", sans-serif;
-  width: 1112px;
+  width: 80%;
   font-size: 16px;
+ 
   color: #dddddd;
   font-weight: 400;
-}
-
-.solucoesContainerCard {
-  display: flex;
   flex-direction: row;
-  width: 80vw;
   overflow-x: scroll;
   gap: 1.5rem;
 }
+
+
 
 .solucoesCard {
   flex-shrink: 0;
@@ -336,7 +334,8 @@
 }
 
 .formContactContainer {
-  height: 120vh;
+  position: relative;
+  height: 1129px;
   padding: 9.5rem 10.5rem 2.5rem;
   display: flex;
   flex-direction: column;
@@ -356,14 +355,25 @@
 
 .secadorWapperDireita {
   position: absolute;
-  bottom: 10%;
-  right: -45%;
+  bottom: 30%;
+  right: -35%;
   z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .secadorWapperEsquerda {
+  position: absolute;
+  top: -5%;
+  left: -35%;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(-70deg);
+}
+.secadorWapperEsquerda2{
+    visibility: hidden;
   position: absolute;
   top: 10%;
   left: -45%;
@@ -372,16 +382,34 @@
   align-items: center;
   justify-content: center;
 }
+.secadorWapperBase {
+  visibility: hidden;
+  position: absolute;
+  top: 10%;
+  left: -45%;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .secadorDireita {
   position: absolute;
-  width: 15%;
+  width: 83.43px;
+  height: 98.61px;
   filter: drop-shadow(0 0 10px var(--cor-rosa));
 }
 .secadorEsquerda {
   position: absolute;
-  width: 15%;
+  width: 83.43px;
+  height: 98.61px;
   filter: drop-shadow(0 0 10px var(--cor-rosa));
+  transform: rotate(-119deg);
+  
 }
+
+
+
 
 .blur {
   z-index: -1;
@@ -403,6 +431,20 @@
   z-index: 0;
 }
 
+.formphoneImage{
+  position: absolute;
+  bottom: 14%;
+  right: -28%;
+  z-index: 1;
+ 
+}
+
+.formlaptopImage{
+  position: absolute;
+   top: -25%;
+  left: -30%;
+}
+
 @media (min-width: 1920px) {
   .appSuccessContainer {
     padding: 9.5rem 24rem;
@@ -416,10 +458,8 @@
     padding-bottom: 0;
   }
   .solucoesContainerCard {
-    display: flex;
-    flex-direction: row;
-    width: 1112px;
     overflow: hidden;
+  
   }
 }
 
@@ -430,22 +470,43 @@
   .SolucoesSubTitulo {
     width: 85%;
   }
+  .appHeroContainer{
+    height: 700px;
+  }
+  .appSuccessDescription {
+    font-size: 20px;
+    width: 70vw;
+  }
 }
 
 @media (max-width: 949px) {
 
+  .appSuccessImage{
+    visibility: hidden;
+  }
+
+  .formlaptopImage{
+    visibility: hidden;
+  }
+
+  .formphoneImage{
+     visibility: hidden;
+  }
+
   .appSuccessDescription {
-  font-size: 12px;
+  font-size: 16px;
   }
   .appSuccessContent {
+    position: relative;
     width: 80vw;
     overflow-x: scroll;
     padding-left: 3rem;
   }
+
   .formContactContainer {
     padding: 0 0 0;
     width: 100%;
-    height: 50%;
+    height: 951px;
     gap: 2rem;
   }
   .formContactContent {
@@ -474,9 +535,38 @@
   .brilhoTopo {
     visibility: hidden;
   }
+  .secadorWapperDireita {
+     right: -10%;
+     bottom: -5%;
+  }
+
+  .secadorWapperBase {
+     left: -35%;
+     bottom: -70%;
+    visibility: visible;
+    z-index: 0;
+  }
+
+  .secadorWapperEsquerda{
+    left: -10%;
+    top: -25%;
+     z-index: 0;
+  }
+
+  .secadorWapperEsquerda2{
+    right: -60rem;
+    top: -10%;
+    visibility: visible;
+  }
+
+   .secadorWapperEsquerda2 .secadorEsquerda{
+    visibility: hidden;
+   }
+
 
   .brilhoFundo {
     visibility: hidden;
+ 
   }
 
   .formContactContent {
@@ -497,7 +587,15 @@
   .heroUnderlineImg {
     display: none;
   }
-
+  .appSuccessDescription {
+    display: grid;
+    place-self: center;
+    text-align: justify;
+    font-size: 12px;
+    padding-top: 0, 5rem;
+    margin-top: 0;
+    width: 70vw;
+  }
 
   .SolucoesTitulo {
     font-size: 32px;
@@ -507,14 +605,43 @@
     font-style: italic;
   }
 
-  .appSuccessDescription {
-    display: grid;
+  
+}
+
+@media (max-width: 600px) {
+    .formContactContainer{
+     height: 1000px;
+    }
+     .appSuccessTitle2 {
+    flex-shrink: 0;
+    display: flex;
     place-self: center;
-    text-align: justify;
-    font-size: 12px;
-    padding-top: 0, 5rem;
-    margin-top: 0;
-    width: 70vw;
+    text-align: start;
+    position: relative;
+    visibility: visible;
+    width: 350px;
+    font-size: 36px;
+    font-weight: 700;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  .appSuccessTitle{
+    visibility: hidden;
+    position: absolute;
+  }
+  .appSuccessStribble2 {
+    visibility: visible;
+    width: 12.28px;
+    height: 9px;
+    position: absolute;
+    top: 50%;
+    left: 1.2cap;
+  }
+  .appSuccessContainer {
+    height: 610px;
+    width: 430px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 }
 
@@ -573,14 +700,7 @@
     visibility: hidden;
   }
 
-  .appSuccessStribble2 {
-    visibility: visible;
-    width: 12.28px;
-    height: 9px;
-    position: absolute;
-    bottom: 3.5rem;
-    left: 4rem;
-  }
+  
 
   .appSuccessTitle {
     visibility: hidden;
@@ -613,19 +733,7 @@
   .SolucoesSubTitulo {
     width: 85%;
   }
-  .appSuccessTitle2 {
-    flex-shrink: 0;
-    display: flex;
-    place-self: center;
-    text-align: start;
-    position: relative;
-    visibility: visible;
-    width: 300px;
-    font-size: 36px;
-    font-weight: 700;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-  }
+ 
 
   .appSuccessTitle {
     visibility: hidden;
@@ -635,12 +743,9 @@
    .appSuccessDescription {
      width: 360px;
   }
-  .appSuccessContainer {
-    height: 610px;
-    width: 430px;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-  }
+  
+
+  
 }
 
 @media (min-width: 1440px) {
@@ -649,9 +754,9 @@
     padding-top: 0;
     padding-bottom: 0;
   }
-  .solucoesContainerCard {
-    display: flex;
-    flex-direction: row;
-    width: 1112px;
+  .solucoesCard{
+    width: 14.8vw;
   }
+
+ 
 }
