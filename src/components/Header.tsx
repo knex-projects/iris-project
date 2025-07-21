@@ -37,25 +37,30 @@ function Header() {
 
       <NavbarContent className={` hidden sm:flex gap-4`} justify="center">
         <NavbarItem>
-          <Link className={styles.navText} href="#">
+          <Link className={`${styles.navText} conheca`} href="#">
             Conheça a Íris
           </Link>
         </NavbarItem>
         <NavbarItem isActive>
-          <Link className={styles.navText} aria-current="page" href="#">
+          <Link
+            className={`${styles.navText} cases`}
+            aria-current="page"
+            href="#"
+          >
             Cases
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link className={styles.navText} href="#">
+          <Link className={`${styles.navText} solucoes`} href="#">
             Soluções
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link className={styles.navText} href="#">
+          <Link className={`${styles.navText} processos`} href="#">
             Processos
           </Link>
         </NavbarItem>
+
         <NavbarItem>
           <Button
             className={styles.buttonNav}
