@@ -19,8 +19,8 @@ import {
   UserCheck,
 } from "lucide-react";
 
-import StribbleYellow from "../../public/images/StribbleYellow.svg"
-import scribbleLine2 from "../../public/images/scribbleLine2.svg"
+import StribbleYellow from "../../public/images/StribbleYellow.svg";
+import scribbleLine2 from "../../public/images/scribbleLine2.svg";
 import decorLines from "../../public/images/decorLines.png";
 import decorTraits from "../../public/images/decorTraits.png";
 import scribbleLine from "../../public/images/scribble.svg";
@@ -43,6 +43,10 @@ import styles from "@/styles/page.module.css";
 import SuccessCaseCard from "@/components/SuccessCaseCard";
 import { Footer } from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
+import { AnimatedBoxDown } from "@/components/animations/downAnimation";
+import { AnimatedBoxLeft } from "@/components/animations/leftAnimate";
+import { AnimatedBoxRight } from "@/components/animations/rightAnimate";
+import { AnimatedBoxEnter } from "@/components/animations/enterAnimation";
 
 export default function Home() {
   return (
@@ -50,75 +54,86 @@ export default function Home() {
       <Header />
 
       {/* Hero */}
+
       <div className={styles.appHeroContainer}>
         <Image
           src={ImageHero}
           alt="Imagem de fundo."
           className={styles.appHeroImage}
         />
-         <Image
+        <Image
           src={ImageHeroMobile}
           alt="Imagem de fundo."
           className={styles.appHeroImage2}
         />
-        <h1 className={`${styles.appHeroTitle} ${playfairDisplay.className}`}>
-          <div className={styles.heroDecorWrapper}>
-            <Image
-              src={decorTraits}
-              alt="Traço decorativo"
-              className={styles.heroDecorImg}
-            />
-            <span className={styles.heroDecorText}>Somos uma agência de</span>
-          </div>
-          <br />
-          <div className={styles.heroUnderlineWrapper}>
-            <span className={styles.heroUnderlineText}>MARKETING DIGITAL</span>
-            <Image
-              src={decorLines}
-              alt="Traço decorativo"
-              className={styles.heroUnderlineImg}
-            />
-          </div>
-          <br />
-          com DNA <span className={styles.heroHighlight}>100%</span>{" "}
-          <span className={styles.heroDecoration}>
-            INOVADOR.
-            <Image
-              src={decorLines}
-              alt="Traço decorativo"
-              className={styles.heroLineBelow}
-            />
-          </span>
-        </h1>
-
-        <div className={styles.appHeroButtons}>
-           <button className={styles.iconButton}>
-            <span className={styles.iconContent}>
-              <span className={styles.iconFade}>
-                <Instagram size={24} />
+        <AnimatedBoxDown className={styles.appHeroContainer}>
+          <h1 className={`${styles.appHeroTitle} ${playfairDisplay.className}`}>
+            <div className={styles.heroDecorWrapper}>
+              <Image
+                src={decorTraits}
+                alt="Traço decorativo"
+                className={styles.heroDecorImg}
+              />
+              <span className={styles.heroDecorText}>Somos uma agência de</span>
+            </div>
+            <br />
+            <div className={styles.heroUnderlineWrapper}>
+              <span className={styles.heroUnderlineText}>
+                MARKETING DIGITAL
               </span>
-              <span className={styles.iconLabel}>Instagram</span>
+              <Image
+                src={decorLines}
+                alt="Traço decorativo"
+                className={styles.heroUnderlineImg}
+              />
+            </div>
+            <br />
+            com DNA <span className={styles.heroHighlight}>100%</span>{" "}
+            <span className={styles.heroDecoration}>
+              INOVADOR.
+              <Image
+                src={decorLines}
+                alt="Traço decorativo"
+                className={styles.heroLineBelow}
+              />
             </span>
-          </button>
- 
-          <Button className={styles.appHeroButtonText} radius="sm" endContent={<ExternalLink size={18} />}>
-          </Button>
+          </h1>
 
-          <button className={styles.iconButton}>
-            <span className={styles.iconContent}>
-              <span className={styles.iconFade}>
-                <Linkedin size={24} />
+          <div className={styles.appHeroButtons}>
+            <button className={styles.iconButton}>
+              <span className={styles.iconContent}>
+                <span className={styles.iconFade}>
+                  <Instagram size={24} />
+                </span>
+                <span className={styles.iconLabel}>Instagram</span>
               </span>
-              <span className={styles.iconLabel}>LinkedIn</span>
-            </span>
-          </button>
-        </div>
+            </button>
+            <Button
+              className={styles.appHeroButtonText}
+              radius="sm"
+              endContent={<ExternalLink size={18} />}
+            ></Button>
+
+            <button className={styles.iconButton}>
+              <span className={styles.iconContent}>
+                <span className={styles.iconFade}>
+                  <Linkedin size={24} />
+                </span>
+                <span className={styles.iconLabel}>LinkedIn</span>
+              </span>
+            </button>
+          </div>
+        </AnimatedBoxDown>
       </div>
 
+      {/* Sobre nós */}
       {/* Success stories */}
       <div className={styles.appSuccessContainer}>
-        <h1 className={`${playfairDisplay.className} ${styles.appSuccessTitle2} `}>
-            Nossos Casos</h1>
+        <h1
+          className={`${playfairDisplay.className} ${styles.appSuccessTitle2} `}
+        >
+          Nossos Casos
+        </h1>
         <div className={styles.appSuccessTitle}>
           <h1 className={`${playfairDisplay.className}`}>
             Casos de sucesso
@@ -137,11 +152,11 @@ export default function Home() {
           <p>Alguns dos nossos casos projetos realizados.</p>
         </div>
 
-        <div className={`embla ${styles.appSuccessContent}`}>
+        <AnimatedBoxLeft className={`embla ${styles.appSuccessContent}`}>
           <SuccessCaseCard logo={logo} name="IRIS" isActive />
           <SuccessCaseCard logo={logo} name="IRIS" isActive />
           <SuccessCaseCard logo={logo} name="IRIS" isActive />
-        </div>
+        </AnimatedBoxLeft>
 
         <p className={styles.appSuccessDescription}>
           A Íris Comunicação Integrada, a agência é especializada em comunicação
@@ -170,25 +185,24 @@ export default function Home() {
             className={styles.megaphoneImage}
           />
           Nossas Soluções
-          <div className={styles.SolucoesTituloImage}> <Image
-            fill
-            src={yellowLine}
-            alt="yellowLine"
-            sizes="(min-width: 490px) 26vw, 9vw"
-            
-          /></div>
-          <Image 
+          <div className={styles.SolucoesTituloImage}>
+            {" "}
+            <Image
+              fill
+              src={yellowLine}
+              alt="yellowLine"
+              sizes="(min-width: 490px) 26vw, 9vw"
+            />
+          </div>
+          <Image
             className={styles.SolucoesTituloStribble}
             src={StribbleYellow}
             alt="yellowLine"
             sizes="(min-width: 490px) 26vw, 9vw"
-            
           />
-         
         </h1>
 
-        <div className={styles.solucoesContainerCard}>
-
+        <AnimatedBoxRight className={styles.solucoesContainerCard}>
           <div className={styles.solucoesCard}>
             <Calendar color="#FCC837" size={40} />
             <h1 className={styles.soluçoesCardTitulo}>Cobertura de Evento</h1>
@@ -244,104 +258,114 @@ export default function Home() {
               destacar no mercado!
             </h2>
           </div>
-        </div>
+        </AnimatedBoxRight>
       </section>
-      {/*Nossos processos*/}
-      <section className={styles.processContainer}>
-        <div className={styles.processColumn}>
-          <div className={styles.appSuccessTitle}>
-            <h1 className={`${playfairDisplay.className}`}>
-              Nossos processos
-              <Image
-                className={styles.appSuccessStribble}
-                src={orangeLine}
-                alt="Risco de decoração do titulo."
-              />
-            </h1>
 
-            <p>Alguns dos nossos casos projetos realizados.</p>
-          </div>
-          <div className={styles.processWrapper}>
+      {/*Nossos processos*/}
+
+      <section className={styles.processContainer}>
+        <div className={styles.processTitle}>
+          <h1 className={`${playfairDisplay.className}`}>
+            Nossos processos
+            <Image
+              className={styles.appSuccessStribble}
+              src={orangeLine}
+              alt="Risco de decoração do titulo."
+            />
+          </h1>
+          <p>Alguns dos nossos casos projetos realizados.</p>
+        </div>
+        {/* Monta o grid*/}
+        <div className={styles.processGrid}>
+          <div className={styles.processColumn}>
             {/* Etapa Inicial */}
-            <div className={styles.cardProcess}>
+
+            <AnimatedBoxEnter className={styles.cardProcess} delayTime={0}>
               <h2>Etapa Inicial</h2>
               <div className={styles.stepContainer}>
                 <div className={styles.step}>
                   <PlayCircle className={styles.stepIcon} />
-                  <div className={styles.stepTitle}>Primeiro Contato</div>
+                  <h3 className={styles.stepTitle}>Primeiro Contato</h3>
                   <p className={styles.stepDescription}>
                     Vamos ter nossa primeira conversa via mensagem ou ligação!
                   </p>
                 </div>
                 <div className={styles.step}>
                   <Stethoscope className={styles.stepIcon} />
-                  <div className={styles.stepTitle}>Reunião de Diagnóstico</div>
+                  <h3 className={styles.stepTitle}>Reunião de Diagnóstico</h3>
                   <p className={styles.stepDescription}>
                     Aqui vamos entender com mais precisão como podemos efetuar
                     nossa parceria!
                   </p>
                 </div>
               </div>
-            </div>
-          </div>
-          {/* Etapa Íris */}
-          <div className={styles.processWrapper}>
-            <div className={styles.cardProcess}>
+            </AnimatedBoxEnter>
+            {/* Etapa Íris */}
+            <AnimatedBoxEnter className={styles.cardProcess} delayTime={1}>
               <h2>Etapa Íris</h2>
               <div className={styles.stepContainer}>
                 <div className={styles.step}>
                   <Flame className={styles.stepIcon} />
-                  <div className={styles.stepTitle}>Execução</div>
+                  <h3 className={styles.stepTitle}>Execução</h3>
                   <p className={styles.stepDescription}>
                     Colocar a mão na massa é o que amamos fazer!
                   </p>
                 </div>
                 <div className={styles.step}>
                   <UserCheck className={styles.stepIcon} />
-                  <div className={styles.stepTitle}>Acompanhamento</div>
+                  <h3 className={styles.stepTitle}>Acompanhamento</h3>
                   <p className={styles.stepDescription}>
                     Estaremos em contato durante todo o projeto para te entregar
                     nossa qualidade de ponta!
                   </p>
                 </div>
               </div>
-            </div>
+            </AnimatedBoxEnter>
           </div>
-        </div>
-        <div className={styles.processArrows}>
-          <Image
-            className={styles.processArrows}
-            src={arrowCurved}
-            alt="Seta curva decorativa"
-          />
-          <Image
-            className={styles.processArrows}
-            src={arrow}
-            alt="Seta decorativa"
-          />
-        </div>
-        {/* Etapa Contratual */}
-        <div className={styles.processColumn}>
-          <div className={styles.cardProcess}>
-            <h2>Etapa Contratual</h2>
-            <div className={styles.stepContainer}>
-              <div className={styles.step}>
-                <FileSignature className={styles.stepIcon} />
-                <div className={styles.stepTitle}>Proposta</div>
-                <p className={styles.stepDescription}>
-                  Hora de apresentar uma proposta exclusiva para você com os
-                  nossos serviços!
-                </p>
-              </div>
-              <div className={styles.step}>
-                <FileText className={styles.stepIcon} />
-                <div className={styles.stepTitle}>Contrato</div>
-                <p className={styles.stepDescription}>
-                  Aqui vamos oficializar nossa parceria de maneira formal!
-                </p>
+          <div className={styles.processArrows}>
+            <Image
+              className={styles.arrows}
+              src={arrowCurved}
+              alt="Seta curva decorativa"
+            />
+            <Image
+              className={styles.arrows}
+              src={arrow}
+              alt="Seta decorativa"
+            />
+          </div>
+          {/* Etapa Contratual */}
+          <AnimatedBoxEnter
+            className={styles.processColumnRight}
+            delayTime={0.5}
+          >
+            <Image
+              src={camera}
+              width={340}
+              height={340}
+              alt="Seta decorativa"
+            />
+            <div className={styles.cardProcess}>
+              <h2>Etapa Contratual</h2>
+              <div className={styles.stepContainer}>
+                <div className={styles.step}>
+                  <FileSignature className={styles.stepIcon} />
+                  <h3 className={styles.stepTitle}>Proposta</h3>
+                  <p className={styles.stepDescription}>
+                    Hora de apresentar uma proposta exclusiva para você com os
+                    nossos serviços!
+                  </p>
+                </div>
+                <div className={styles.step}>
+                  <FileText className={styles.stepIcon} />
+                  <h3 className={styles.stepTitle}>Contrato</h3>
+                  <p className={styles.stepDescription}>
+                    Aqui vamos oficializar nossa parceria de maneira formal!
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
+          </AnimatedBoxEnter>
         </div>
       </section>
       {/* Formulário de contato */}

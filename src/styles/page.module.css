@@ -215,6 +215,10 @@
 .formContactTitle {
   position: relative;
   color: var(--cor-branco);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .appSuccessTitle2 {
@@ -324,10 +328,10 @@
   width: 461px;
   height: 26px;
 }
- .SolucoesTituloStribble {
-     visibility: hidden;
-      position: absolute;
- }
+.SolucoesTituloStribble {
+  visibility: hidden;
+  position: absolute;
+}
 
 .SolucoesSubTitulo {
   width: 1112px;
@@ -457,7 +461,55 @@
   z-index: 0;
 }
 
-/* Para os ícones e blocos internos de cada etapa */
+/* Process Section */
+.processContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  width: 100%;
+  height: 1300px;
+}
+.processGrid {
+  display: grid;
+  width: 80%;
+  height: 1000px;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  grid-template-columns: 1fr 0.5fr 1fr;
+}
+.processColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: full;
+  gap: 10rem;
+}
+.processColumnRight {
+  align-self: flex-start;
+}
+.cardProcess {
+  background-color: #1b1b1b;
+  padding: 2rem;
+  height: 400px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.cardProcess h2 {
+  text-align: center;
+  color: #fff;
+  font-weight: 200;
+  margin-bottom: 1rem;
+  font-size: 24px;
+}
+.processArrows {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+}
 .stepContainer {
   display: flex;
   justify-content: space-between;
@@ -465,14 +517,16 @@
 }
 
 .step {
-  background-color: #1c1c1c;
+  border: 1px solid #434343;
   padding: 16px;
   border-radius: 10px;
   flex: 1;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  align-items: flex-start;
+  height: 280px;
+  align-items: center;
+  justify-content: center;
   transition: transform 0.3s;
 }
 
@@ -482,92 +536,47 @@
 }
 
 .stepIcon {
-  font-size: 24px;
-  color: #ff5a00; /* Cor laranja do layout */
+  font-size: 48px;
+  color: #f96836;
 }
 
 .stepTitle {
   font-weight: bold;
   font-size: 18px;
   color: #fff;
+  width: 100%;
+  text-align: center;
 }
-
+.stepTitle::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #f96836;
+  margin-top: 8px;
+}
 .stepDescription {
+  text-align: center;
   font-size: 14px;
   color: #bbb;
 }
-.processContainer {
-  display: grid;
-  align-items: center;
-  grid-template-columns: auto auto auto;
-  height: 1300px;
-}
-.cardProcess {
-  background-color: #111;
-  color: #fff;
-  border-radius: 12px;
-  padding: 24px;
-  width: 55%;
-  height: 50%;
+.processTitle {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-  font-family: "Arial", sans-serif;
-}
-.processColumn {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-}
-
-.cardProcess h2 {
-  font-size: 20px;
-  font-weight: 700;
-  color: #fff;
-  margin-bottom: 8px;
-}
-
-.cardProcess p {
-  font-size: 16px;
-  line-height: 1.4;
-  color: #ddd;
-}
-
-.processWrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 40px;
-}
-
-.processArrows {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 10rem;
+  align-items: flex-start;
+  justify-content: flex-start;
   width: 80%;
-  height: 40%;
 }
-.processDecorImage {
+.processTitle h1 {
+  font-size: 48px;
   position: relative;
-  display: inline-block;
-  top: 0;
-  left: 5%;
-  width: 200px;
-  height: auto;
-  pointer-events: none;
-  user-select: none;
+  z-index: 1;
 }
 
 @media (max-width: 768px) {
   .heroUnderlineImg {
     display: none;
   }
-
 
   .SolucoesTitulo {
     font-size: 32px;
@@ -619,25 +628,23 @@
   .appHeroButtons a,
   .appHeroButtons icon {
     font-size: 20px;
-  
   }
 
-  .appHeroButtons button{
+  .appHeroButtons button {
     height: 58px;
     min-width: 56px;
   }
-  .appHeroButtons{
+  .appHeroButtons {
     padding-bottom: 5rem;
   }
 
-.appHeroButtons a{
-  width: 56px;
-}
-
-  .appHeroTitle{
-    padding-bottom: 7rem;
+  .appHeroButtons a {
+    width: 56px;
   }
 
+  .appHeroTitle {
+    padding-bottom: 7rem;
+  }
 
   .appSuccessStribble {
     visibility: hidden;
@@ -658,8 +665,8 @@
   }
 
   .SolucoesTituloStribble {
-     visibility: visible;
-      position: absolute;
+    visibility: visible;
+    position: absolute;
     width: 12.28px;
     height: 9px;
     bottom: 1.5em;
@@ -702,8 +709,8 @@
     position: absolute;
   }
 
-   .appSuccessDescription {
-     width: 360px;
+  .appSuccessDescription {
+    width: 360px;
   }
   .appSuccessContainer {
     height: 610px;
