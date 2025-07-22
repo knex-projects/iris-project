@@ -61,7 +61,7 @@ export default function Home() {
 
       {/* Hero */}
 
-      <div className={styles.appHeroContainer}>
+      <div id="ConheçaaÍris" className={styles.appHeroContainer}>
         <Image
           src={ImageHero}
           alt="Imagem de fundo."
@@ -134,20 +134,28 @@ export default function Home() {
 
       {/* Sobre nós */}
       {/* Success stories */}
-      <div className={styles.appSuccessContainer}>
+      <div id="Cases"  className={styles.appSuccessContainer}>
         <h1
-          className={`${playfairDisplay.className} ${styles.appSuccessTitle2} `}
+          className={`${playfairDisplay.className} ${styles.appSuccessTitle2}  max-md:w-[263px] grid `}
         >
           Nossos Casos
-        </h1>
-        <div className={styles.appSuccessTitle}>
-          <h1 className={`${playfairDisplay.className}`}>
-            Casos de sucesso
             <Image
               className={styles.appSuccessStribble}
               src={scribbleLine}
               alt="Risco de decoração do titulo."
             />
+        </h1>
+        <div className={styles.appSuccessTitle}>
+        
+          <h1 className={`${playfairDisplay.className}`}>
+            Casos de sucesso
+
+            <Image
+              className={styles.appSuccessStribble2}
+              src={scribbleLine}
+              alt="Risco de decoração do titulo."
+            />
+           
             <Image
               className={styles.appSuccessStribble2}
               src={scribbleLine2}
@@ -158,8 +166,9 @@ export default function Home() {
               alt="Imagem de fundo."
               className={styles.appSuccessImage}
             />
+            
           </h1>
-
+             
           <p>Alguns dos nossos casos projetos realizados.</p>
         </div>
 
@@ -179,7 +188,7 @@ export default function Home() {
       </div>
 
       {/* Soluções */}
-      <section className={styles.solucoesContainer}>
+      <section id="Soluções" className={styles.solucoesContainer}>
         <h2
           className={`${styles.SolucoesSubTitulo}  ${playfairDisplay.className}`}
         >
@@ -274,12 +283,12 @@ export default function Home() {
 
       {/*Nossos processos*/}
 
-      <section className={styles.processContainer}>
+      <section id="Processos" className={styles.processContainer}>
         <div className={styles.processTitle}>
           <h1 className={`${playfairDisplay.className}`}>
             Nossos processos
             <Image
-              className={styles.appSuccessStribble}
+              className={styles.appProcessStribble}
               src={orangeLine}
               alt="Risco de decoração do titulo."
             />
@@ -396,7 +405,7 @@ export default function Home() {
         </div>
       </section>
       {/* Formulário de contato */}
-      <section className={styles.formContactContainer}>
+      <section id="Contato" className={styles.formContactContainer}>
         <div className={styles.formContactTitle}>
           <h1 className={`${playfairDisplay.className}`}>
             Agilize sua solicitação!
