@@ -1,4 +1,5 @@
 .SuccessCaseCardContainer {
+  position: relative;
   flex-shrink: 0;
   width: 16rem;
   height: 16rem;
@@ -14,6 +15,7 @@
   box-shadow: 0 4px 10px rgba(45, 163, 66, 1);
   cursor: pointer;
 }
+
 
 @media (max-width: 949px) {
   .SuccessCaseCardContainer{

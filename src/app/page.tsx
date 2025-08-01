@@ -47,6 +47,12 @@ import { AnimatedBoxDown } from "@/components/animations/downAnimation";
 import { AnimatedBoxLeft } from "@/components/animations/leftAnimate";
 import { AnimatedBoxRight } from "@/components/animations/rightAnimate";
 import { AnimatedBoxEnter } from "@/components/animations/enterAnimation";
+import laptop from "../../public/images/laptop.svg";
+import phone from "../../public/images/phone.svg";
+import olhos from "../../public/images/olhos.svg";
+import novaPaylogo from "../../public/images/novaPayLogo.svg";
+import greenSolutionLogo from "../../public/images/GreenSolutionsLogo.svg";
+import ProcessStepIcon from "../../public/images/ProcessStepIcon.svg";
 
 export default function Home() {
   return (
@@ -55,7 +61,7 @@ export default function Home() {
 
       {/* Hero */}
 
-      <div className={styles.appHeroContainer}>
+      <div id="ConheçaaÍris" className={styles.appHeroContainer}>
         <Image
           src={ImageHero}
           alt="Imagem de fundo."
@@ -128,33 +134,47 @@ export default function Home() {
 
       {/* Sobre nós */}
       {/* Success stories */}
-      <div className={styles.appSuccessContainer}>
+      <div id="Cases"  className={styles.appSuccessContainer}>
         <h1
-          className={`${playfairDisplay.className} ${styles.appSuccessTitle2} `}
+          className={`${playfairDisplay.className} ${styles.appSuccessTitle2}  max-md:w-[263px] grid `}
         >
           Nossos Casos
-        </h1>
-        <div className={styles.appSuccessTitle}>
-          <h1 className={`${playfairDisplay.className}`}>
-            Casos de sucesso
             <Image
               className={styles.appSuccessStribble}
               src={scribbleLine}
               alt="Risco de decoração do titulo."
             />
+        </h1>
+        <div className={styles.appSuccessTitle}>
+        
+          <h1 className={`${playfairDisplay.className}`}>
+            Casos de sucesso
+
+            <Image
+              className={styles.appSuccessStribble2}
+              src={scribbleLine}
+              alt="Risco de decoração do titulo."
+            />
+           
             <Image
               className={styles.appSuccessStribble2}
               src={scribbleLine2}
               alt="Risco de decoração do titulo."
             />
+            <Image
+              src={olhos}
+              alt="Imagem de fundo."
+              className={styles.appSuccessImage}
+            />
+            
           </h1>
-
+             
           <p>Alguns dos nossos casos projetos realizados.</p>
         </div>
 
         <AnimatedBoxLeft className={`embla ${styles.appSuccessContent}`}>
-          <SuccessCaseCard logo={logo} name="IRIS" isActive />
-          <SuccessCaseCard logo={logo} name="IRIS" isActive />
+          <SuccessCaseCard logo={novaPaylogo} name="IRIS" isActive />
+          <SuccessCaseCard logo={greenSolutionLogo} name="IRIS" isActive />
           <SuccessCaseCard logo={logo} name="IRIS" isActive />
         </AnimatedBoxLeft>
 
@@ -168,7 +188,7 @@ export default function Home() {
       </div>
 
       {/* Soluções */}
-      <section className={styles.solucoesContainer}>
+      <section id="Soluções" className={styles.solucoesContainer}>
         <h2
           className={`${styles.SolucoesSubTitulo}  ${playfairDisplay.className}`}
         >
@@ -263,12 +283,12 @@ export default function Home() {
 
       {/*Nossos processos*/}
 
-      <section className={styles.processContainer}>
+      <section id="Processos" className={styles.processContainer}>
         <div className={styles.processTitle}>
           <h1 className={`${playfairDisplay.className}`}>
             Nossos processos
             <Image
-              className={styles.appSuccessStribble}
+              className={styles.appProcessStribble}
               src={orangeLine}
               alt="Risco de decoração do titulo."
             />
@@ -282,6 +302,11 @@ export default function Home() {
 
             <AnimatedBoxEnter className={styles.cardProcess} delayTime={0}>
               <h2>Etapa Inicial</h2>
+              <Image
+                className={styles.ProcessStepIcon}
+                src={ProcessStepIcon}
+                alt="Seta curva decorativa"
+              />
               <div className={styles.stepContainer}>
                 <div className={styles.step}>
                   <PlayCircle className={styles.stepIcon} />
@@ -303,6 +328,11 @@ export default function Home() {
             {/* Etapa Íris */}
             <AnimatedBoxEnter className={styles.cardProcess} delayTime={1}>
               <h2>Etapa Íris</h2>
+              <Image
+                className={styles.ProcessStepIcon}
+                src={ProcessStepIcon}
+                alt="Seta curva decorativa"
+              />
               <div className={styles.stepContainer}>
                 <div className={styles.step}>
                   <Flame className={styles.stepIcon} />
@@ -340,6 +370,7 @@ export default function Home() {
             delayTime={0.5}
           >
             <Image
+              className={styles.processCamera}
               src={camera}
               width={340}
               height={340}
@@ -347,6 +378,11 @@ export default function Home() {
             />
             <div className={styles.cardProcess}>
               <h2>Etapa Contratual</h2>
+              <Image
+                className={styles.ProcessStepIcon}
+                src={ProcessStepIcon}
+                alt="Seta curva decorativa"
+              />
               <div className={styles.stepContainer}>
                 <div className={styles.step}>
                   <FileSignature className={styles.stepIcon} />
@@ -369,7 +405,7 @@ export default function Home() {
         </div>
       </section>
       {/* Formulário de contato */}
-      <section className={styles.formContactContainer}>
+      <section id="Contato" className={styles.formContactContainer}>
         <div className={styles.formContactTitle}>
           <h1 className={`${playfairDisplay.className}`}>
             Agilize sua solicitação!
@@ -394,6 +430,34 @@ export default function Home() {
             className={styles.brilhoTopo}
             alt="imagens de decoração"
           />
+
+          <Image
+            src={laptop}
+            width={215}
+            height={215}
+            alt="laptop"
+            className={styles.formlaptopImage}
+          />
+          <Image
+            src={phone}
+            width={178}
+            height={178}
+            alt="phone"
+            className={styles.formphoneImage}
+          />
+          <div className={styles.secadorWapperEsquerda}>
+            <Image
+              src={secadorBrilhoEsquerda}
+              className={styles.secadorEsquerda}
+              alt="imagens de decoração"
+            />
+            <Image
+              className={styles.blur}
+              src={blur}
+              alt="imagens de decoração"
+            />
+          </div>
+
           <div className={styles.secadorWapperDireita}>
             <Image
               src={secadorBrilhoDireita}

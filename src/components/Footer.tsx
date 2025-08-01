@@ -5,7 +5,9 @@ export function Footer(){
 
 return(
 <section className={styles.footerContainer} >
-    <Image className={styles.image} src={"/images/logo.svg"} alt="logo Iris"  width={187} height={125}/>
+    <div className={styles.image}>
+         <Image  src={"/images/logo.svg"} alt="logo Iris" fill  className="object-contain" />
+    </div>
     <div className={styles.infoContainer}>
     <div className=" " >
         <h1 className={styles.h1Text}>Recursos</h1>

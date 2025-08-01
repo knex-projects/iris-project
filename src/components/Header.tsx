@@ -19,25 +19,25 @@ import styles from "../styles/components/Header.module.css";
 function Header() {
   return (
     <Navbar className={styles.headerContainer} disableAnimation isBordered>
-      <NavbarContent className="sm:hidden" justify="start">
+      <NavbarContent className="lg:hidden lg:absolute " justify="start">
         <NavbarMenuToggle />
       </NavbarContent>
 
-      <NavbarContent className="sm:hidden pr-3" justify="center">
+      <NavbarContent className="lg:hidden pr-4" justify="center">
         <NavbarBrand>
           <Image src={ImageLogo} alt="Logo Iris" />
         </NavbarBrand>
       </NavbarContent>
 
-      <NavbarContent className="hidden sm:flex">
+      <NavbarContent className="hidden lg:flex " justify="end">
         <NavbarBrand>
           <Image src={ImageLogo} alt="Logo Iris" />
         </NavbarBrand>
       </NavbarContent>
 
-      <NavbarContent className={` hidden sm:flex gap-4`} justify="center">
+      <NavbarContent className={` hidden lg:flex gap-10`} justify="center">
         <NavbarItem>
-          <Link className={`${styles.navText} conheca`} href="#">
+          <Link className={`${styles.navText} conheca`} href="#ConheçaaÍris">
             Conheça a Íris
           </Link>
         </NavbarItem>
@@ -45,18 +45,18 @@ function Header() {
           <Link
             className={`${styles.navText} cases`}
             aria-current="page"
-            href="#"
+            href="#Cases"
           >
             Cases
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link className={`${styles.navText} solucoes`} href="#">
+          <Link className={`${styles.navText} solucoes`} href="#Soluções">
             Soluções
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link className={`${styles.navText} processos`} href="#">
+          <Link className={`${styles.navText} processos`} href="#Processos">
             Processos
           </Link>
         </NavbarItem>
@@ -65,7 +65,7 @@ function Header() {
           <Button
             className={styles.buttonNav}
             as={Link}
-            href="#"
+            href="#Contato"
             variant="flat"
           >
             Contato
@@ -75,22 +75,38 @@ function Header() {
 
       <NavbarMenu className={styles.sidebarContainer}>
         <NavbarMenuItem>
-          <Link className={`${styles.navText} mb-3 w-full`} href="#" size="lg">
+          <Link
+            className={`${styles.navText} mb-0 bl-0 text-[#4D61B7] mt-20 w-full`}
+            href="#ConheçaaÍris"
+            size="lg"
+          >
             Conheça a Íris
           </Link>
         </NavbarMenuItem>
         <NavbarMenuItem>
-          <Link className={`${styles.navText} mb-3 w-full`} href="#" size="lg">
+          <Link
+            className={`${styles.navText} mb-0 text-[#2DA342] w-full`}
+            href="#Cases"
+            size="lg"
+          >
             Cases
           </Link>
         </NavbarMenuItem>
         <NavbarMenuItem>
-          <Link className={`${styles.navText} mb-3 w-full`} href="#" size="lg">
+          <Link
+            className={`${styles.navText} mb-0 w-full text-[#FCC837] text-center`}
+            href="#Soluções"
+            size="lg"
+          >
             Soluções
           </Link>
         </NavbarMenuItem>
         <NavbarMenuItem>
-          <Link className={`${styles.navText} mb-3 w-full`} href="#" size="lg">
+          <Link
+            className={`${styles.navText} mb-0 w-full text-[#F96836]  text-center`}
+            href="#Processos"
+            size="lg"
+          >
             Processos
           </Link>
         </NavbarMenuItem>
@@ -98,7 +114,7 @@ function Header() {
           <Button
             className={styles.buttonNav}
             as={Link}
-            href="#"
+            href="#Contato"
             variant="flat"
           >
             Contato

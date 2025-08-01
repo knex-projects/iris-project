@@ -1,20 +1,20 @@
 .headerContainer {
   background-color: var(--cor-preto);
   height: 9rem;
+  width: 100%;
   color: var(--cor-branco);
   position: fixed;
   top: 0;
-}
-
-.sidebarContainer {
-  background-color: var(--cor-preto);
-  color: var(--cor-branco);
-  top: 9rem;
-}
-
-.navContent {
   display: flex;
-  gap: 2rem;
+  align-items: center;
+  gap: 10rem;
+  padding: 0 9%;
+  justify-content: space-around;
+}
+
+.navbarContent {
+  width: 100%;
+  display: flex;
 }
 
 .buttonNav {
@@ -29,7 +29,7 @@
 .navText {
   font-weight: 500;
   font-size: 20px;
-  color: var(--cor-branco);
+ 
 }
 
 .navText::after {
@@ -75,4 +75,40 @@
   border-radius: 15px;
   border: none;
   font-weight: 600;
+}
+
+@media (max-width: 1023px) {
+  .navText {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid #dddddd;
+    height: 46px;
+    color: none;
+  }
+
+ 
+
+  .sidebarContainer {
+    width: 100%;
+    padding: 0;
+    background-color: #1B1B1B;
+    height: 320px;
+    gap: 0;
+  }
+  .buttonNav {
+    width: 100vw;
+    border-radius: 0;
+  }
+  .navbarContent {
+    padding: 0%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .navText{
+    color: var(--cor-branco);
+  }
 }
