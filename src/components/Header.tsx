@@ -38,7 +38,7 @@ function Header() {
       <NavbarContent className={` hidden lg:flex gap-10`} justify="center">
         <NavbarItem>
           <Link className={`${styles.navText} conheca`} href="#ConheçaaÍris">
-            Conheça a Íris
+            Conheça a Iris
           </Link>
         </NavbarItem>
         <NavbarItem isActive>
