@@ -53,6 +53,7 @@ import olhos from "../../public/images/olhos.svg";
 import novaPaylogo from "../../public/images/novaPayLogo.svg";
 import greenSolutionLogo from "../../public/images/GreenSolutionsLogo.svg";
 import ProcessStepIcon from "../../public/images/ProcessStepIcon.svg";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -106,56 +107,61 @@ export default function Home() {
           </h1>
 
           <div className={styles.appHeroButtons}>
-            <button className={styles.iconButton}>
+            <Link
+              href={"https://www.instagram.com/ejiriscomunicacao/"}
+              target="_blank"
+              className={styles.iconButton}
+            >
               <span className={styles.iconContent}>
                 <span className={styles.iconFade}>
                   <Instagram size={24} />
                 </span>
                 <span className={styles.iconLabel}>Instagram</span>
               </span>
-            </button>
+            </Link>
             <Button
               className={styles.appHeroButtonText}
               radius="sm"
               endContent={<ExternalLink size={18} />}
             ></Button>
 
-            <button className={styles.iconButton}>
+            <Link
+              href={"https://www.linkedin.com/company/iriscomunicacao/"}
+              target="_blank"
+              className={styles.iconButton}
+            >
               <span className={styles.iconContent}>
                 <span className={styles.iconFade}>
                   <Linkedin size={24} />
                 </span>
                 <span className={styles.iconLabel}>LinkedIn</span>
               </span>
-            </button>
+            </Link>
           </div>
         </AnimatedBoxDown>
       </div>
 
       {/* Sobre nós */}
       {/* Success stories */}
-      <div id="Cases"  className={styles.appSuccessContainer}>
+      <div id="Cases" className={styles.appSuccessContainer}>
         <h1
           className={`${playfairDisplay.className} ${styles.appSuccessTitle2}  max-md:w-[263px] grid `}
         >
           Nossos Casos
-            <Image
-              className={styles.appSuccessStribble}
-              src={scribbleLine}
-              alt="Risco de decoração do titulo."
-            />
+          <Image
+            className={styles.appSuccessStribble}
+            src={scribbleLine}
+            alt="Risco de decoração do titulo."
+          />
         </h1>
         <div className={styles.appSuccessTitle}>
-        
           <h1 className={`${playfairDisplay.className}`}>
             Casos de sucesso
-
             <Image
               className={styles.appSuccessStribble2}
               src={scribbleLine}
               alt="Risco de decoração do titulo."
             />
-           
             <Image
               className={styles.appSuccessStribble2}
               src={scribbleLine2}
@@ -166,9 +172,8 @@ export default function Home() {
               alt="Imagem de fundo."
               className={styles.appSuccessImage}
             />
-            
           </h1>
-             
+
           <p>Alguns dos nossos casos projetos realizados.</p>
         </div>
 
@@ -179,9 +184,9 @@ export default function Home() {
         </AnimatedBoxLeft>
 
         <p className={styles.appSuccessDescription}>
-          A Íris Comunicação Integrada, a agência é especializada em comunicação
+          A Iris Comunicação Integrada, a agência é especializada em comunicação
           pública, organizacional e corporativa, trabalhando com o conceito de
-          comunicação integrada e geração de conteúdo. A Íris valoriza a
+          comunicação integrada e geração de conteúdo. A Iris valoriza a
           responsabilidade socioambiental e utiliza metodologias participativas
           em seus projetos.
         </p>
@@ -239,8 +244,9 @@ export default function Home() {
             </h1>
             <div className={styles.solucoesLine}></div>
             <h2 className={styles.soluçoesCardText}>
-              Captamos cada momento de um jeito que faz a diferença, em tempo
-              real para não perder nenhum detalhe do seu momento especial.
+              Quer se comunicar melhor com seu público? A gente te ajuda! Com
+              estratégia e um olhar personalizado, apontamos caminhos para
+              fortalecer a sua marca!
             </h2>
           </div>
           <div className={styles.solucoesCard}>
@@ -273,9 +279,9 @@ export default function Home() {
             </h1>
             <div className={styles.solucoesLine}></div>
             <h2 className={styles.soluçoesCardText}>
-              Estar nas redes é mais do que postar: é construir presença.
-              Montaremos estratégias voltadas especialmente para sua empresa se
-              destacar no mercado!
+              Estar nas redes é mais do que postar: é construir presença. Aqui
+              vamos montar estratégias voltadas especialmente para sua empresa
+              se destacar no mercado!
             </h2>
           </div>
         </AnimatedBoxRight>
@@ -325,9 +331,9 @@ export default function Home() {
                 </div>
               </div>
             </AnimatedBoxEnter>
-            {/* Etapa Íris */}
+            {/* Etapa Iris */}
             <AnimatedBoxEnter className={styles.cardProcess} delayTime={1}>
-              <h2>Etapa Íris</h2>
+              <h2>Etapa Iris</h2>
               <Image
                 className={styles.ProcessStepIcon}
                 src={ProcessStepIcon}
