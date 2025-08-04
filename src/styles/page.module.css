@@ -8,7 +8,7 @@
 .appHeroContainer {
   position: relative;
   width: 100%;
-  height: 700px;
+  height: 850px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -389,8 +389,9 @@
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 0.75rem;
+  text-align: center;
   color: #dddddd;
-  width: 145px;
+  width: 150px;
 }
 
 .solucoesLine {
@@ -620,13 +621,13 @@
   z-index: 1;
 }
 
-.ProcessStepIcon{
+.ProcessStepIcon {
   position: absolute;
   visibility: hidden;
   width: 223px;
   justify-self: center;
   padding-bottom: 5px;
- }
+}
 
 @media (max-width: 1100px) {
   .appSuccessDescription {
@@ -643,7 +644,7 @@
   .formphoneImage {
     visibility: hidden;
   }
-  .processContainer{
+  .processContainer {
     height: 1700px;
   }
   .processGrid {
@@ -652,7 +653,6 @@
     gap: 1rem;
   }
   .processColumn {
-
     gap: 1rem;
   }
   .processArrows {
@@ -663,28 +663,26 @@
     position: absolute;
     visibility: hidden;
   }
-  .cardProcess{
+  .cardProcess {
     background-color: white;
-     box-shadow: 0 4px 12px rgba(0, 0, 0, 0);
-  
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0);
   }
   .cardProcess h2 {
-      color: #1B1B1B;
-      margin-bottom: 0;
+    color: #1b1b1b;
+    margin-bottom: 0;
   }
- .step{
-  background-color: #1B1B1B;
-  width: 10vw;
- }
- .ProcessStepIcon{
-  position: relative;
-  visibility: visible;
-  padding-bottom: 10px;
- }
- 
+  .step {
+    background-color: #1b1b1b;
+    width: 10vw;
+  }
+  .ProcessStepIcon {
+    position: relative;
+    visibility: visible;
+    padding-bottom: 10px;
+  }
 }
 @media (max-width: 768px) {
- .appSuccessContainer {
+  .appSuccessContainer {
     display: grid;
     height: 610px;
     align-self: center;
@@ -737,11 +735,9 @@
   .SolucoesTituloImage {
     width: 300px;
   }
-  
 }
 
-@media (max-width: 600px) { 
-  
+@media (max-width: 600px) {
   .processTitle h1 {
     font-size: 36px;
     font-weight: 700;
@@ -749,15 +745,15 @@
   .processTitle p {
     visibility: hidden;
   }
-  .step{
+  .step {
     width: 40vw;
   }
-  .cardProcess{
+  .cardProcess {
     width: 80vw;
     align-self: center;
     padding: 0;
   }
-  .processContainer{
+  .processContainer {
     height: 1450px;
     gap: 0;
     margin-top: 30px;
@@ -817,31 +813,30 @@
     visibility: visible;
     width: 254px;
     padding-bottom: 30px;
-    
   }
-  .appSuccessStribble2{
+  .appSuccessStribble2 {
     visibility: hidden;
   }
-  .appProcessStribble{
+  .appProcessStribble {
     width: 353px;
   }
 }
 
 @media (max-width: 490px) {
-  .step{
+  .step {
     justify-content: flex-start;
     padding-top: 15%;
   }
-  .processTitle h1{
+  .processTitle h1 {
     font-size: 30px;
   }
   .heroUnderlineImg {
     display: none;
   }
-   .appSuccessStribble {
+  .appSuccessStribble {
     position: absolute;
     left: 0%;
-   }
+  }
 
   .appHeroButtonText::before {
     content: "Conheça a Irís";
@@ -887,8 +882,6 @@
     padding-bottom: 7rem;
   }
 
-  
-
   .appSuccessTitle {
     visibility: hidden;
     position: absolute;
@@ -919,7 +912,7 @@
   }
   .SolucoesSubTitulo {
     width: 85%;
-     word-break: break-word;
+    word-break: break-word;
   }
 
   .appSuccessTitle {
@@ -927,21 +920,21 @@
     position: absolute;
   }
 
-  .appSuccessContent{
+  .appSuccessContent {
     width: 90vw;
     justify-self: center;
   }
-  .appSuccessTitle2{
+  .appSuccessTitle2 {
     word-break: break-word;
     width: 80vw;
     justify-self: center;
     text-align: center;
   }
-  .stepTitle{
+  .stepTitle {
     font-size: 16px;
     word-break: break-word;
   }
-  .stepDescription{
+  .stepDescription {
     font-size: 12px;
   }
 
@@ -950,15 +943,15 @@
     width: 85vw;
     word-break: break-word;
   }
-  .SolucoesTitulo{
-     word-break: break-word;
+  .SolucoesTitulo {
+    word-break: break-word;
   }
-  .processTitle{
-     word-break: break-word;
+  .processTitle {
+    word-break: break-word;
   }
 
-  .formContactTitle{
-     word-break: break-word;
+  .formContactTitle {
+    word-break: break-word;
   }
 }
 
