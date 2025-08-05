@@ -2,7 +2,8 @@
   background-color: #1a1a1a;
   padding: 48px 32px;
   border-radius: 16px;
-  width: 624px;
+  max-width: 624px;
+  width: 100vw;
   margin: 0 auto;
   color: white;
   display: flex;
@@ -69,7 +70,7 @@
 
 @media(max-width: 600px){
 .form{
-  width: 85%;
+  width: 99%;
   height: 690px;
 }
 

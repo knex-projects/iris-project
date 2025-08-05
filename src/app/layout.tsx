@@ -18,8 +18,8 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Íris Comunicação Integrada",
-  description: "Landing page da Íris Comunicação Integrada.",
+  title: "Iris Comunicação Integrada",
+  description: "Landing page da Iris Comunicação Integrada.",
 };
 
 export default function RootLayout({

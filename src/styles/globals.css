@@ -25,6 +25,11 @@ body {
   overflow-x: hidden;
 }
 
+html{
+   scroll-behavior: smooth;
+  scroll-padding-top: 9rem;
+}
+
 body {
   color: var(--cor-preto);
   background: var(--cor-branco);

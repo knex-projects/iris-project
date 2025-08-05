@@ -8,13 +8,14 @@
 .appHeroContainer {
   position: relative;
   width: 100%;
-  height: 700px;
+  height: 850px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  background-size: cover;
 }
 
 .appHeroImage {
@@ -41,6 +42,64 @@
   line-height: 1.4;
 }
 
+.iconButton {
+  background-color: #000;
+  border: 1px solid #63636340;
+  color: #fff;
+  cursor: pointer;
+  padding: 1rem;
+  border-radius: 1rem;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  transition: width 0.3s ease, padding 0.3s ease;
+}
+.iconButton:hover {
+  width: 100px;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.iconContent {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+}
+
+.iconFade {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconLabel {
+  position: absolute;
+  bottom: 0.3rem;
+  font-size: 0.7rem;
+  opacity: 0;
+  transform: translateY(0.5rem);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  white-space: nowrap;
+}
+
+/* Hover efeito */
+.iconButton:hover .iconFade {
+  transform: translateY(-1.2rem);
+  opacity: 0;
+}
+
+.iconButton:hover .iconLabel {
+  opacity: 1;
+  transform: translateY(0);
+}
 .appHeroButtons {
   position: relative;
   z-index: 2;
@@ -58,6 +117,13 @@
   background-color: #000;
   border: 1px solid #63636340;
   color: #fff;
+  cursor: pointer;
+  overflow: hidden;
+  padding: 0.5rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .heroHighlight {
@@ -131,7 +197,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  gap: 5rem;
 }
 
 .appSuccessContent {
@@ -150,6 +216,11 @@
 .formContactTitle {
   position: relative;
   color: var(--cor-branco);
+  display: flex;
+  width: 624px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .appSuccessTitle2 {
@@ -192,7 +263,7 @@
 }
 
 .appSuccessDescription {
-  text-align: justify;
+  text-align: center;
   font-size: 20px;
   font-weight: 400;
   width: 1112px;
@@ -201,11 +272,11 @@
   padding-bottom: 2rem;
 }
 
- .appSuccessImage{
-    position: absolute;
-    right: 120%;
-    top: -85%;
-  }
+.appSuccessImage {
+  position: absolute;
+  right: 120%;
+  top: -85%;
+}
 
 .appSuccessStribble2 {
   visibility: visible;
@@ -261,10 +332,10 @@
   width: 461px;
   height: 26px;
 }
- .SolucoesTituloStribble {
-     visibility: hidden;
-      position: absolute;
- }
+.SolucoesTituloStribble {
+  visibility: hidden;
+  position: absolute;
+}
 
 .SolucoesSubTitulo {
   width: 80%;
@@ -279,15 +350,14 @@
   font-family: "Poppins", sans-serif;
   width: 80%;
   font-size: 16px;
- 
+
   color: #dddddd;
   font-weight: 400;
   flex-direction: row;
   overflow-x: scroll;
+
   gap: 1.5rem;
 }
-
-
 
 .solucoesCard {
   flex-shrink: 0;
@@ -304,8 +374,7 @@
 }
 
 .soluçoesCardTitulo {
-  position: absolute;
-  top: 22%;
+  position: relative;
   width: 165px;
   text-align: center;
   font-family: "Poppins", sans-serif;
@@ -321,8 +390,9 @@
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 0.75rem;
+  text-align: center;
   color: #dddddd;
-  width: 145px;
+  width: 150px;
 }
 
 .solucoesLine {
@@ -336,21 +406,21 @@
 .formContactContainer {
   position: relative;
   height: 1129px;
-  padding: 9.5rem 10.5rem 2.5rem;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  background-color: var(--cor-preto);
   gap: 5rem;
+  background-color: var(--cor-preto);
   border-bottom: 1px solid var(--cor-cinza);
   border-top: 1px solid var(--cor-cinza);
 }
 
 .formContactContent {
   position: relative;
-  width: fit-content;
+  width: 100vw;
+  max-width: 664px;
   margin: 0 auto;
-  padding: 2rem;
 }
 
 .secadorWapperDireita {
@@ -372,8 +442,8 @@
   justify-content: center;
   transform: rotate(-70deg);
 }
-.secadorWapperEsquerda2{
-    visibility: hidden;
+.secadorWapperEsquerda2 {
+  visibility: hidden;
   position: absolute;
   top: 10%;
   left: -45%;
@@ -405,11 +475,7 @@
   height: 98.61px;
   filter: drop-shadow(0 0 10px var(--cor-rosa));
   transform: rotate(-119deg);
-  
 }
-
-
-
 
 .blur {
   z-index: -1;
@@ -431,162 +497,227 @@
   z-index: 0;
 }
 
-.formphoneImage{
+.formphoneImage {
   position: absolute;
   bottom: 14%;
   right: -28%;
   z-index: 1;
- 
 }
 
-.formlaptopImage{
+.formlaptopImage {
   position: absolute;
-   top: -25%;
+  top: -25%;
   left: -30%;
 }
 
-@media (min-width: 1920px) {
-  .appSuccessContainer {
-    padding: 9.5rem 24rem;
-  }
+/* Process Section */
+.processContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  width: 100%;
+  height: 1300px;
+}
+.processGrid {
+  display: grid;
+  width: 80%;
+  height: 1000px;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  grid-template-columns: 1fr 0.5fr 1fr;
+}
+.processColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: full;
+  gap: 10rem;
+}
+.processColumnRight {
+  align-self: flex-start;
+}
+.cardProcess {
+  background-color: #1b1b1b;
+  padding: 2rem;
+  height: 400px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.cardProcess h2 {
+  text-align: center;
+  color: #fff;
+  font-weight: 200;
+  margin-bottom: 1rem;
+  font-size: 24px;
+}
+.processArrows {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+}
+.stepContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
 }
 
-@media (min-width: 1440px) {
-  .solucoesContainer {
-    height: 669px;
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-  .solucoesContainerCard {
-    overflow: hidden;
-  
-  }
+.step {
+  border: 1px solid #434343;
+  padding: 16px;
+  border-radius: 10px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 280px;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s;
 }
 
-@media (max-width: 1200px) {
-  .SolucoesTitulo {
-    width: 85%;
-  }
-  .SolucoesSubTitulo {
-    width: 85%;
-  }
-  .appHeroContainer{
-    height: 700px;
-  }
+.step:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+}
+
+.stepIcon {
+  font-size: 48px;
+  color: #f96836;
+}
+
+.stepTitle {
+  font-weight: bold;
+  font-size: 18px;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+}
+.stepTitle::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #f96836;
+  margin-top: 8px;
+}
+.stepDescription {
+  text-align: center;
+  font-size: 14px;
+  color: #bbb;
+}
+.processTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 80%;
+}
+.processTitle h1 {
+  font-size: 48px;
+  position: relative;
+  z-index: 1;
+}
+
+.ProcessStepIcon {
+  display: flex;
+  position: absolute;
+  visibility: hidden;
+  width: 100vw; 
+  max-height: 75px;
+  justify-self: center;
+  padding-bottom: 5px;
+}
+
+@media (max-width: 1100px) {
   .appSuccessDescription {
-    font-size: 20px;
-    width: 70vw;
+    max-width: 1112px;
+    width: 85vw;
+    font-size: 2vw;
   }
-}
-
-@media (max-width: 949px) {
-
-  .appSuccessImage{
+  .appSuccessImage {
     visibility: hidden;
   }
-
-  .formlaptopImage{
+  .formlaptopImage {
     visibility: hidden;
   }
-
-  .formphoneImage{
-     visibility: hidden;
+  .formphoneImage {
+    visibility: hidden;
   }
-
-  .appSuccessDescription {
-  font-size: 16px;
+  .processContainer {
+    height: 1700px;
   }
-  .appSuccessContent {
+  .processGrid {
+    height: 1314px;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+  }
+  .processColumn {
+    gap: 1rem;
+  }
+  .processArrows {
+    position: absolute;
+    visibility: hidden;
+  }
+  .processCamera {
+    position: absolute;
+    visibility: hidden;
+  }
+  .cardProcess {
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0);
+  }
+  .cardProcess h2 {
+    color: #1b1b1b;
+    margin-bottom: 0;
+  }
+  .step {
+    background-color: #1b1b1b;
+    width: 10vw;
+  }
+  .ProcessStepIcon {
     position: relative;
-    width: 80vw;
-    overflow-x: scroll;
-    padding-left: 3rem;
+    visibility: visible;
+    padding-bottom: 10px;
   }
-
-  .formContactContainer {
-    padding: 0 0 0;
-    width: 100%;
-    height: 951px;
-    gap: 2rem;
-  }
-  .formContactContent {
-    padding-top: 0;
-  }
-  .formContactTitle {
-    padding-top: 5vh;
-    gap: 2rem;
-    padding-bottom: 0;
+}
+@media (max-width: 768px) {
+  .appSuccessContainer {
     display: grid;
-    place-self: center;
-    text-align: center;
-    width: 310px;
+    height: 610px;
+    align-self: center;
+    width: 99vw;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    justify-content: center;
+    padding: 0 0 0 0;
   }
-  .formContactTitle h1 {
-    font-size: 36px;
-    width: 310px;
-    height: 73px;
-  }
-
-  .formContatStribble {
-    width: 250px;
-    place-self: center;
-  }
-
   .brilhoTopo {
     visibility: hidden;
   }
-  .secadorWapperDireita {
-     right: -10%;
-     bottom: -5%;
-  }
-
-  .secadorWapperBase {
-     left: -35%;
-     bottom: -70%;
-    visibility: visible;
-    z-index: 0;
-  }
-
-  .secadorWapperEsquerda{
-    left: -10%;
-    top: -25%;
-     z-index: 0;
-  }
-
-  .secadorWapperEsquerda2{
-    right: -60rem;
-    top: -10%;
-    visibility: visible;
-  }
-
-   .secadorWapperEsquerda2 .secadorEsquerda{
-    visibility: hidden;
-   }
-
-
   .brilhoFundo {
     visibility: hidden;
- 
   }
-
-  .formContactContent {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+  .appSuccessContent {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    width: 90vw;
   }
-  .appHeroContainer {
-    height: 643px;
-  }
-  .appHeroTitle {
-    font-size: 42px;
-    line-height: 42px;
-  }
-}
-
-@media (max-width: 768px) {
   .heroUnderlineImg {
     display: none;
   }
+
+  .SolucoesTitulo {
+    font-size: 32px;
+  }
+  .SolucoesSubTitulo {
+    font-size: 11px;
+    font-style: italic;
+  }
+
   .appSuccessDescription {
     display: grid;
     place-self: center;
@@ -604,15 +735,38 @@
     font-size: 11px;
     font-style: italic;
   }
-
-  
+  .SolucoesTituloImage {
+    width: 300px;
+  }
 }
 
 @media (max-width: 600px) {
-    .formContactContainer{
-     height: 1000px;
-    }
-     .appSuccessTitle2 {
+  .processTitle h1 {
+    font-size: 36px;
+    font-weight: 700;
+  }
+  .processTitle p {
+    visibility: hidden;
+  }
+  .step {
+    width: 40vw;
+  }
+  .cardProcess {
+    width: 80vw;
+    align-self: center;
+    padding: 0;
+  }
+  .processContainer {
+    height: 1450px;
+    gap: 0;
+    margin-top: 30px;
+  }
+
+  .formContactContainer {
+    height: 1000px;
+    gap: 3rem;
+  }
+  .appSuccessTitle2 {
     flex-shrink: 0;
     display: flex;
     place-self: center;
@@ -625,7 +779,7 @@
     padding-top: 2rem;
     padding-bottom: 2rem;
   }
-  .appSuccessTitle{
+  .appSuccessTitle {
     visibility: hidden;
     position: absolute;
   }
@@ -638,16 +792,53 @@
     left: 1.2cap;
   }
   .appSuccessContainer {
+    display: grid;
     height: 610px;
-    width: 430px;
+    align-self: center;
+    width: 99vw;
     padding-top: 1rem;
     padding-bottom: 1rem;
+    justify-content: center;
+    padding: 0 0 0 0;
+  }
+  .formContactTitle {
+    text-wrap: pretty;
+    max-width: 330px;
+    width: 80vw;
+    text-overflow: clip;
+    text-align: center;
+  }
+  .formContactTitle h1 {
+    font-size: 36px;
+    font-weight: 700;
+  }
+  .appSuccessStribble {
+    visibility: visible;
+    width: 254px;
+    padding-bottom: 30px;
+  }
+  .appSuccessStribble2 {
+    visibility: hidden;
+  }
+  .appProcessStribble {
+    width: 353px;
   }
 }
 
 @media (max-width: 490px) {
+  .step {
+    justify-content: flex-start;
+    padding-top: 15%;
+  }
+  .processTitle h1 {
+    font-size: 30px;
+  }
   .heroUnderlineImg {
     display: none;
+  }
+  .appSuccessStribble {
+    position: absolute;
+    left: 0%;
   }
 
   .appHeroButtonText::before {
@@ -676,31 +867,23 @@
   .appHeroButtons a,
   .appHeroButtons icon {
     font-size: 20px;
-  
   }
 
-  .appHeroButtons button{
+  .appHeroButtons button {
     height: 58px;
     min-width: 56px;
   }
-  .appHeroButtons{
+  .appHeroButtons {
     padding-bottom: 5rem;
   }
 
-.appHeroButtons a{
-  width: 56px;
-}
+  .appHeroButtons a {
+    width: 56px;
+  }
 
-  .appHeroTitle{
+  .appHeroTitle {
     padding-bottom: 7rem;
   }
-
-
-  .appSuccessStribble {
-    visibility: hidden;
-  }
-
-  
 
   .appSuccessTitle {
     visibility: hidden;
@@ -708,8 +891,8 @@
   }
 
   .SolucoesTituloStribble {
-     visibility: visible;
-      position: absolute;
+    visibility: hidden;
+    position: absolute;
     width: 12.28px;
     height: 9px;
     bottom: 1.5em;
@@ -717,7 +900,7 @@
   }
 
   .SolucoesTituloImage {
-    visibility: hidden;
+    visibility: visible;
   }
 
   .solucoesContainer {
@@ -732,20 +915,47 @@
   }
   .SolucoesSubTitulo {
     width: 85%;
+    word-break: break-word;
   }
- 
 
   .appSuccessTitle {
     visibility: hidden;
     position: absolute;
   }
 
-   .appSuccessDescription {
-     width: 360px;
+  .appSuccessContent {
+    width: 90vw;
+    justify-self: center;
   }
-  
+  .appSuccessTitle2 {
+    word-break: break-word;
+    width: 80vw;
+    justify-self: center;
+    text-align: center;
+  }
+  .stepTitle {
+    font-size: 16px;
+    word-break: break-word;
+  }
+  .stepDescription {
+    font-size: 12px;
+  }
 
-  
+  .appSuccessDescription {
+    max-width: 360px;
+    width: 85vw;
+    word-break: break-word;
+  }
+  .SolucoesTitulo {
+    word-break: break-word;
+  }
+  .processTitle {
+    word-break: break-word;
+  }
+
+  .formContactTitle {
+    word-break: break-word;
+  }
 }
 
 @media (min-width: 1440px) {
@@ -754,9 +964,10 @@
     padding-top: 0;
     padding-bottom: 0;
   }
-  .solucoesCard{
+  .solucoesCard {
     width: 14.8vw;
   }
-
- 
+  .solucoesContainerCard {
+    overflow-x: hidden;
+  }
 }
