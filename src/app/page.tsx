@@ -22,7 +22,7 @@ import {
 import StribbleYellow from "../../public/images/StribbleYellow.svg";
 import decorLines from "../../public/images/decorLines.png";
 import decorTraits from "../../public/images/decorTraits.png";
-import ImageHero from "../../public/images/Fundo.svg";
+import ImageHero from "../../public/images/fundo.svg";
 import yellowLine from "../../public/images/yellowLine.svg";
 import orangeLine from "../../public/images/orangeLine.svg";
 import pinkLine from "../../public/images/pinkLine.svg";
@@ -35,7 +35,7 @@ import blur from "../../public/images/blur.svg";
 import ImageHeroMobile from "../../public/fundoMobile.svg";
 import camera from "../../public/images/camera.svg";
 import arrow from "../../public/images/arrow.svg";
-import arrowCurved from "../../public/images/arrowCurved.svg";
+import arrowCurved from "../../public/images/arrowCurve.svg";
 import styles from "@/styles/page.module.css";
 import { Footer } from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
@@ -47,6 +47,8 @@ import phone from "../../public/images/phone.svg";
 import ProcessStepIcon from "../../public/images/ProcessStepIcon.svg";
 import Link from "next/link";
 import SuccessCasesSection from "@/components/SuccessCasesSection";
+import { AnimatedBoxLevitating } from "@/components/animations/levitateAnimation";
+import { AnimatedBoxBreathing } from "@/components/animations/breathAnimation";
 
 export default function Home() {
   return (
@@ -135,7 +137,8 @@ export default function Home() {
       </div>
 
       {/* Sobre nós */}
-      {/* Success stories */}
+
+      {/* Casos de Sucesso */}
       <SuccessCasesSection fontClassName={playfairDisplay.className} />
       {/* Soluções */}
       <section id="Soluções" className={styles.solucoesContainer}>
