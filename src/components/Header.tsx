@@ -80,7 +80,7 @@ function Header() {
             href="#ConheçaaÍris"
             size="lg"
           >
-            Conheça a Íris
+            Conheça a Iris
           </Link>
         </NavbarMenuItem>
         <NavbarMenuItem>

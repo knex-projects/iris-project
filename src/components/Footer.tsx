@@ -17,7 +17,7 @@ export function Footer() {
         <div className=" ">
           <h1 className={styles.h1Text}>Recursos</h1>
           <a href="#">
-            <h1 className={styles.h2Text}>Conheça a Íris</h1>
+            <h1 className={styles.h2Text}>Conheça a Iris</h1>
           </a>
           <a href="#">
             <h1 className={styles.h2Text}>Cases</h1>
