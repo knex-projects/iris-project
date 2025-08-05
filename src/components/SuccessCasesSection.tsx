@@ -1,11 +1,10 @@
 // src/components/SuccessCasesSection.tsx
 
-"use client"; // Marcando este componente como de cliente
+"use client";
 
 import { useState } from "react";
 import Image from "next/image";
 
-// Imports que esta seção precisa
 import styles from "@/styles/page.module.css";
 import SuccessCaseCard, { SucessCaseProps } from "@/components/SuccessCaseCard";
 import { AnimatedBoxLeft } from "@/components/animations/leftAnimate";
@@ -16,7 +15,7 @@ import divinoNutsLogo from "../../public/images/portfolio/DIVINO NUTS.png";
 import endipeLogo from "../../public/images/portfolio/ENDIPE.png";
 import visuLogo from "../../public/images/portfolio/VISU.png";
 
-// Dados dos casos de sucesso
+
 const successCasesData = [
   {
     logo: divinoNutsLogo,
@@ -38,7 +37,6 @@ const successCasesData = [
   },
 ];
 
-// O componente precisa receber a classe da fonte como uma prop
 interface SuccessCasesSectionProps {
   fontClassName: string;
 }
