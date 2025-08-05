@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import Image from "next/image";
 import { Button } from "@heroui/react";
-import { playfairDisplay } from "./layout";
+import { playfairDisplay } from "../lib/fonts"
 import {
   Calendar,
   Camera,

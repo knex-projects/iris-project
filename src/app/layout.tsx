@@ -1,21 +1,8 @@
 import type { Metadata } from "next";
-import { Poppins, Playfair_Display_SC } from "next/font/google";
 import "../styles/globals.css";
-
 import { HeroUIProvider } from "@heroui/react";
 import { Toaster } from "react-hot-toast";
-
-export const playfairDisplay = Playfair_Display_SC({
-  weight: "700",
-  style: "normal",
-  subsets: ["latin"],
-});
-
-const poppins = Poppins({
-  weight: ["400", "500", "700"],
-  style: "normal",
-  subsets: ["latin"],
-});
+import { playfairDisplay, poppins } from "@/lib/fonts";
 
 export const metadata: Metadata = {
   title: "Iris Comunicação Integrada",
