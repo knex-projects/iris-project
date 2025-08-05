@@ -20,12 +20,9 @@ import {
 } from "lucide-react";
 
 import StribbleYellow from "../../public/images/StribbleYellow.svg";
-import scribbleLine2 from "../../public/images/scribbleLine2.svg";
 import decorLines from "../../public/images/decorLines.png";
 import decorTraits from "../../public/images/decorTraits.png";
-import scribbleLine from "../../public/images/scribble.svg";
 import ImageHero from "../../public/images/Fundo.svg";
-import logo from "../../public/images/logo.png";
 import yellowLine from "../../public/images/yellowLine.svg";
 import orangeLine from "../../public/images/orangeLine.svg";
 import pinkLine from "../../public/images/pinkLine.svg";
@@ -40,22 +37,16 @@ import camera from "../../public/images/camera.svg";
 import arrow from "../../public/images/arrow.svg";
 import arrowCurved from "../../public/images/arrowCurved.svg";
 import styles from "@/styles/page.module.css";
-import SuccessCaseCard from "@/components/SuccessCaseCard";
 import { Footer } from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
 import { AnimatedBoxDown } from "@/components/animations/downAnimation";
-import { AnimatedBoxLeft } from "@/components/animations/leftAnimate";
 import { AnimatedBoxRight } from "@/components/animations/rightAnimate";
 import { AnimatedBoxEnter } from "@/components/animations/enterAnimation";
 import laptop from "../../public/images/laptop.svg";
 import phone from "../../public/images/phone.svg";
-import olhos from "../../public/images/olhos.svg";
-import novaPaylogo from "../../public/images/novaPayLogo.svg";
-import greenSolutionLogo from "../../public/images/GreenSolutionsLogo.svg";
 import ProcessStepIcon from "../../public/images/ProcessStepIcon.svg";
 import Link from "next/link";
-import { AnimatedBoxBreathing } from "@/components/animations/breathAnimation";
-import { AnimatedBoxLevitating } from "@/components/animations/levitateAnimation";
+import SuccessCasesSection from "@/components/SuccessCasesSection";
 
 export default function Home() {
   return (
@@ -145,55 +136,7 @@ export default function Home() {
 
       {/* Sobre nós */}
       {/* Success stories */}
-      <div id="Cases" className={styles.appSuccessContainer}>
-        <h1
-          className={`${playfairDisplay.className} ${styles.appSuccessTitle2}  max-md:w-[263px] grid `}
-        >
-          Nossos Casos
-          <Image
-            className={styles.appSuccessStribble}
-            src={scribbleLine}
-            alt="Risco de decoração do titulo."
-          />
-        </h1>
-        <div className={styles.appSuccessTitle}>
-          <h1 className={`${playfairDisplay.className}`}>
-            Casos de sucesso
-            <Image
-              className={styles.appSuccessStribble2}
-              src={scribbleLine}
-              alt="Risco de decoração do titulo."
-            />
-            <Image
-              className={styles.appSuccessStribble2}
-              src={scribbleLine2}
-              alt="Risco de decoração do titulo."
-            />
-            <Image
-              src={olhos}
-              alt="Imagem de fundo."
-              className={styles.appSuccessImage}
-            />
-          </h1>
-
-          <p>Alguns dos nossos casos projetos realizados.</p>
-        </div>
-
-        <AnimatedBoxLeft className={`embla ${styles.appSuccessContent}`}>
-          <SuccessCaseCard logo={novaPaylogo} name="IRIS" isActive />
-          <SuccessCaseCard logo={greenSolutionLogo} name="IRIS" isActive />
-          <SuccessCaseCard logo={logo} name="IRIS" isActive />
-        </AnimatedBoxLeft>
-
-        <p className={styles.appSuccessDescription}>
-          A Iris Comunicação Integrada é uma agência especializada em
-          comunicação pública, organizacional e corporativa, trabalhando com o
-          conceito de comunicação integrada e geração de conteúdo. A Iris
-          valoriza a responsabilidade socioambiental e utiliza metodologias
-          participativas em seus projetos.
-        </p>
-      </div>
-
+      <SuccessCasesSection fontClassName={playfairDisplay.className} />
       {/* Soluções */}
       <section id="Soluções" className={styles.solucoesContainer}>
         <h2
