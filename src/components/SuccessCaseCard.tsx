@@ -30,7 +30,11 @@ const SuccessCaseCard = ({
       }`}
       onClick={onClick}
     >
-      <Image src={logo} alt={`Logo da ${name}`} />
+      <Image
+        src={logo}
+        alt={`Logo da ${name}`}
+        className={isActive ? "grayscale-0" : "grayscale"}
+      />
     </div>
   );
 };
