@@ -29,8 +29,8 @@ import pinkLine from "../../public/images/pinkLine.svg";
 import megaphone from "../../public/images/megaphone.svg";
 import BrilhoFundo from "../../public/images/formBrilhoFundo.svg";
 import BrilhoTopo from "../../public/images/formBrilhoTopo.svg";
-import secadorBrilhoDireita from "../../public/images/secadorBrilhoDireita.svg";
-import secadorBrilhoEsquerda from "../../public/images/secadorBrilhoEsquerda.svg";
+import estrelaDireita from "../../public/images/estrelaDireita.svg";
+import estrelaEsquerda from "../../public/images/estrelaEsquerda.svg";
 import blur from "../../public/images/blur.svg";
 import ImageHeroMobile from "../../public/fundoMobile.svg";
 import camera from "../../public/images/camera.svg";
@@ -374,79 +374,74 @@ export default function Home() {
           <Image
             src={BrilhoFundo}
             className={styles.brilhoFundo}
-            alt="imagens de decoração"
+            alt="Brilho de Fundo"
           />
           <Image
             src={BrilhoTopo}
             className={styles.brilhoTopo}
-            alt="imagens de decoração"
+            alt="Brilho de Topo"
           />
-
-          <Image
-            src={laptop}
-            width={215}
-            height={215}
-            alt="laptop"
+          <AnimatedBoxLevitating
             className={styles.formlaptopImage}
-          />
-          <Image
-            src={phone}
-            width={178}
-            height={178}
-            alt="phone"
+            delay={1}
+            direction="up"
+          >
+            <Image src={laptop} width={215} height={215} alt="laptop" />
+          </AnimatedBoxLevitating>
+          <AnimatedBoxLevitating
             className={styles.formphoneImage}
-          />
-          <div className={styles.secadorWapperEsquerda}>
+            delay={2}
+            direction="down"
+          >
+            <Image src={phone} width={178} height={178} alt="phone" />
+          </AnimatedBoxLevitating>
+          <AnimatedBoxBreathing
+            className={styles.secadorWapperEsquerda}
+            delay={5}
+          >
             <Image
-              src={secadorBrilhoEsquerda}
+              src={estrelaEsquerda}
               className={styles.secadorEsquerda}
-              alt="imagens de decoração"
+              alt="Secador de cabelo com brilho esquerdo"
             />
-            <Image
-              className={styles.blur}
-              src={blur}
-              alt="imagens de decoração"
-            />
-          </div>
+            <Image className={styles.blur} src={blur} alt="Brilho de Fundo" />
+          </AnimatedBoxBreathing>
 
-          <div className={styles.secadorWapperDireita}>
+          <AnimatedBoxBreathing
+            className={styles.secadorWapperDireita}
+            delay={6}
+          >
             <Image
-              src={secadorBrilhoDireita}
+              src={estrelaDireita}
               className={styles.secadorDireita}
-              alt="imagens de decoração"
+              alt="Secador de cabelo com brilho direito"
             />
-            <Image
-              className={styles.blur}
-              src={blur}
-              alt="imagens de decoração"
-            />
-          </div>
+            <Image className={styles.blur} src={blur} alt="Brilho de Fundo" />
+          </AnimatedBoxBreathing>
 
-          <div className={styles.secadorWapperEsquerda}>
+          <AnimatedBoxBreathing
+            className={styles.secadorWapperEsquerda}
+            delay={4}
+          >
             <Image
-              src={secadorBrilhoEsquerda}
+              src={estrelaEsquerda}
               className={styles.secadorEsquerda}
-              alt="imagens de decoração"
+              alt="Secador de cabelo com brilho esquerdo"
             />
-            <Image
-              className={styles.blur}
-              src={blur}
-              alt="imagens de decoração"
-            />
-          </div>
+            <Image className={styles.blur} src={blur} alt="Brilho de Fundo" />
+          </AnimatedBoxBreathing>
 
-          <div className={styles.secadorWapperEsquerda}>
+          <AnimatedBoxBreathing
+            className={styles.secadorWapperEsquerda}
+            delay={4}
+          >
             <Image
-              src={secadorBrilhoEsquerda}
+              src={estrelaEsquerda}
               className={styles.secadorEsquerda}
-              alt="imagens de decoração"
+              alt="Secador de cabelo com brilho esquerdo"
             />
-            <Image
-              className={styles.blur}
-              src={blur}
-              alt="imagens de decoração"
-            />
-          </div>
+            <Image className={styles.blur} src={blur} alt="Brilho de Fundo" />
+          </AnimatedBoxBreathing>
           <ContactForm />
         </div>
       </section>
