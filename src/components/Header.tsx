@@ -37,7 +37,7 @@ function Header() {
 
       <NavbarContent className={` hidden lg:flex gap-10`} justify="center">
         <NavbarItem>
-          <Link className={`${styles.navText} conheca`} href="#ConheçaaÍris">
+          <Link className={`${styles.navText} conheca`} href="#ConheçaaIris">
             Conheça a Iris
           </Link>
         </NavbarItem>
@@ -77,7 +77,7 @@ function Header() {
         <NavbarMenuItem>
           <Link
             className={`${styles.navText} mb-0 bl-0 text-[#4D61B7] mt-20 w-full`}
-            href="#ConheçaaÍris"
+            href="#ConheçaaIris"
             size="lg"
           >
             Conheça a Iris

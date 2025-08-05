@@ -62,7 +62,7 @@ export default function Home() {
 
       {/* Hero */}
 
-      <div id="ConheçaaÍris" className={styles.appHeroContainer}>
+      <div id="ConheçaaIris" className={styles.appHeroContainer}>
         <Image
           src={ImageHero}
           alt="Imagem de fundo."
@@ -184,7 +184,7 @@ export default function Home() {
         </AnimatedBoxLeft>
 
         <p className={styles.appSuccessDescription}>
-          A Iris Comunicação Integrada, a agência é especializada em comunicação
+          A Iris Comunicação Integrada é uma agência especializada em comunicação
           pública, organizacional e corporativa, trabalhando com o conceito de
           comunicação integrada e geração de conteúdo. A Iris valoriza a
           responsabilidade socioambiental e utiliza metodologias participativas
@@ -233,7 +233,7 @@ export default function Home() {
             <h1 className={styles.soluçoesCardTitulo}>Cobertura de Evento</h1>
             <div className={styles.solucoesLine}></div>
             <h2 className={styles.soluçoesCardText}>
-              Captamos cada momento de um jeito que faz a diferença, em tempo
+              Captamos cada momento de um jeito que faz a diferença! Em tempo
               real para não perder nenhum detalhe do seu momento especial.
             </h2>
           </div>
