@@ -27,13 +27,15 @@ const SuccessCaseCard = ({
     <div
       className={`${styles.SuccessCaseCardContainer} border-2 ${
         isActive ? "border-green-500" : "border-transparent"
-      }`}
+      } transition-all duration-300`}
       onClick={onClick}
     >
       <Image
         src={logo}
         alt={`Logo da ${name}`}
-        className={isActive ? "grayscale-0" : "grayscale"}
+        className={`${
+          isActive ? "grayscale-0" : "grayscale"
+        } transition-all duration-300`}
       />
     </div>
   );

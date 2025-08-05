@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import Image from "next/image";
 import { Button } from "@heroui/react";
-import { playfairDisplay } from "../lib/fonts"
+import { playfairDisplay } from "../lib/fonts";
 import {
   Calendar,
   Camera,
@@ -22,7 +22,7 @@ import {
 import StribbleYellow from "../../public/images/StribbleYellow.svg";
 import decorLines from "../../public/images/decorLines.png";
 import decorTraits from "../../public/images/decorTraits.png";
-import ImageHero from "../../public/images/fundo.svg";
+import ImageHero from "../../public/images/fundo.jpg";
 import yellowLine from "../../public/images/yellowLine.svg";
 import orangeLine from "../../public/images/orangeLine.svg";
 import pinkLine from "../../public/images/pinkLine.svg";
@@ -61,7 +61,7 @@ export default function Home() {
         <Image
           src={ImageHero}
           alt="Imagem de fundo."
-          className={styles.appHeroImage}
+          className={`${styles.appHeroImage} z-0`}
         />
         <Image
           src={ImageHeroMobile}
