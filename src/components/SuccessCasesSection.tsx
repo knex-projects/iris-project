@@ -1,22 +1,20 @@
 // src/components/SuccessCasesSection.tsx
 
-"use client"; // Marcando este componente como de cliente
+"use client";
 
 import { useState } from "react";
 import Image from "next/image";
 
-// Imports que esta seção precisa
 import styles from "@/styles/page.module.css";
 import SuccessCaseCard, { SucessCaseProps } from "@/components/SuccessCaseCard";
 import { AnimatedBoxLeft } from "@/components/animations/leftAnimate";
 import scribbleLine from "../../public/images/scribble.svg";
-import scribbleLine2 from "../../public/images/scribbleLine2.svg";
 import olhos from "../../public/images/olhos.svg";
 import divinoNutsLogo from "../../public/images/portfolio/DIVINO NUTS.png";
 import endipeLogo from "../../public/images/portfolio/ENDIPE.png";
 import visuLogo from "../../public/images/portfolio/VISU.png";
+import { AnimatedBoxDown } from "./animations/downAnimation";
 
-// Dados dos casos de sucesso
 const successCasesData = [
   {
     logo: divinoNutsLogo,
@@ -38,7 +36,6 @@ const successCasesData = [
   },
 ];
 
-// O componente precisa receber a classe da fonte como uma prop
 interface SuccessCasesSectionProps {
   fontClassName: string;
 }
@@ -52,10 +49,8 @@ export default function SuccessCasesSection({
     "A Iris Comunicação Integrada é uma agência especializada em comunicação pública, organizacional e corporativa, trabalhando com o conceito de comunicação integrada e geração de conteúdo. A Iris valoriza a responsabilidade socioambiental e utiliza metodologias participativas em seus projetos.";
 
   const handleSuccessCardClick = (caseData: SucessCaseProps) => {
-    console.log("aqui");
     if (activeCase && activeCase.name === caseData.name) {
       setActiveCase(null);
-      console.log("teste");
     } else {
       setActiveCase(caseData);
     }
@@ -82,11 +77,6 @@ export default function SuccessCasesSection({
             alt="Risco de decoração do titulo."
           />
           <Image
-            className={styles.appSuccessStribble2}
-            src={scribbleLine2}
-            alt="Risco de decoração do titulo."
-          />
-          <Image
             src={olhos}
             alt="Imagem de fundo."
             className={styles.appSuccessImage}
@@ -107,9 +97,10 @@ export default function SuccessCasesSection({
         ))}
       </AnimatedBoxLeft>
 
-      <p className={styles.appSuccessDescription}>
-        {activeCase ? activeCase.description : defaultDescriptionSuccessCase}
-      </p>
+      <AnimatedBoxDown key={activeCase ? activeCase.name : "default"}
+          duration={1} className={styles.appSuccessDescription}>
+         <p>{activeCase ? activeCase.description : defaultDescriptionSuccessCase}</p>
+      </AnimatedBoxDown>
     </div>
   );
 }

@@ -118,9 +118,7 @@ export default function ContactForm() {
         </div>
 
         <div className={styles.field}>
-          <label>
-            Telefone 2<span>*</span>
-          </label>
+          <label>Telefone 2</label>
           <Controller
             name="telefone2"
             control={control}
