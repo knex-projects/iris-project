@@ -237,7 +237,7 @@ export default function Home() {
 
       {/*Nossos processos - Gambiarra */}
 
-      <div className="bp:block hidden">
+      <div className="2lg:block hidden">
         {/* PC */}
         <section id="Processos" className={styles.processContainer}>
           <div className={styles.processTitle}>
@@ -362,7 +362,7 @@ export default function Home() {
         </section>
       </div>
 
-      <div className="block bp:hidden">
+      <div className="block 2lg:hidden">
         {/* Mobile */}
         <section id="Processos" className={styles.processContainer}>
           <div className={styles.processTitle}>
