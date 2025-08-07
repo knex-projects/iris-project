@@ -591,7 +591,7 @@
 }
 
 .stepTitle {
-  font-weight: bold;
+  font-weight: 400;
   font-size: 18px;
   color: #fff;
   width: 100%;
@@ -606,6 +606,8 @@
   margin-top: 8px;
 }
 .stepDescription {
+  font-weight: 400;
+  font-style: normal;
   text-align: center;
   font-size: 14px;
   color: #bbb;
@@ -942,10 +944,12 @@
   }
   .stepTitle {
     font-size: 16px;
+    font-weight: 400;
     word-break: break-word;
   }
   .stepDescription {
     font-size: 12px;
+    font-weight: 400;
   }
 
   .appSuccessDescription {
