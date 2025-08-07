@@ -19,14 +19,17 @@ import styles from "../styles/components/Header.module.css";
 function Header() {
   return (
     <Navbar className={styles.headerContainer} disableAnimation isBordered>
-      <NavbarContent className="lg:hidden lg:absolute " justify="start">
-        <NavbarMenuToggle />
-      </NavbarContent>
-
       <NavbarContent className="lg:hidden pr-4" justify="center">
         <NavbarBrand>
-          <Image src={ImageLogo} alt="Logo Iris" />
+          <Image src={ImageLogo}  alt="Logo Iris" />{" "} {/* Logo Iris do modo mobile*/}
         </NavbarBrand>
+      </NavbarContent>
+
+      <NavbarContent
+        className="lg:hidden lg:absolute"
+        justify="end"
+      >
+        <NavbarMenuToggle />
       </NavbarContent>
 
       <NavbarContent className="hidden lg:flex " justify="end">

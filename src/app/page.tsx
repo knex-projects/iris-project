@@ -235,22 +235,147 @@ export default function Home() {
         </AnimatedBoxRight>
       </section>
 
-      {/*Nossos processos*/}
+      {/*Nossos processos - Gambiarra */}
 
-      <section id="Processos" className={styles.processContainer}>
-        <div className={styles.processTitle}>
-          <h1 className={`${playfairDisplay.className}`}>
-            Nossos processos
-            <Image
-              className={styles.appProcessStribble}
-              src={orangeLine}
-              alt="Risco de decoração do titulo."
-            />
-          </h1>
-          <p>Alguns dos nossos casos projetos realizados.</p>
-        </div>
-        {/* Monta o grid*/}
-        <div className={styles.processGrid}>
+      <div className="2lg:block hidden">
+        {/* PC */}
+        <section id="Processos" className={styles.processContainer}>
+          <div className={styles.processTitle}>
+            <h1 className={`${playfairDisplay.className}`}>
+              Nossos processos
+              <Image
+                className={styles.appProcessStribble}
+                src={orangeLine}
+                alt="Risco de decoração do titulo."
+              />
+            </h1>
+            <p>Alguns dos nossos casos projetos realizados.</p>
+          </div>
+          {/* Monta o grid*/}
+          <div className={styles.processGrid}>
+            <div className={styles.processColumn}>
+              {/* Etapa Inicial */}
+
+              <AnimatedBoxEnter className={styles.cardProcess} delayTime={0}>
+                <h2>Etapa Inicial</h2>
+                <Image
+                  className={styles.ProcessStepIcon}
+                  src={ProcessStepIcon}
+                  alt="Seta curva decorativa"
+                />
+                <div className={styles.stepContainer}>
+                  <div className={styles.step}>
+                    <PlayCircle className={styles.stepIcon} />
+                    <h3 className={styles.stepTitle}>Primeiro Contato</h3>
+                    <p className={styles.stepDescription}>
+                      Vamos ter nossa primeira conversa via mensagem ou ligação!
+                    </p>
+                  </div>
+                  <div className={styles.step}>
+                    <Stethoscope className={styles.stepIcon} />
+                    <h3 className={styles.stepTitle}>Reunião de Diagnóstico</h3>
+                    <p className={styles.stepDescription}>
+                      Aqui vamos entender com mais precisão como podemos efetuar
+                      nossa parceria!
+                    </p>
+                  </div>
+                </div>
+              </AnimatedBoxEnter>
+              {/* Etapa Iris */}
+              <AnimatedBoxEnter className={styles.cardProcess} delayTime={1}>
+                <h2>Etapa Iris</h2>
+                <Image
+                  className={styles.ProcessStepIcon}
+                  src={ProcessStepIcon}
+                  alt="Seta curva decorativa"
+                />
+                <div className={styles.stepContainer}>
+                  <div className={styles.step}>
+                    <Flame className={styles.stepIcon} />
+                    <h3 className={styles.stepTitle}>Execução</h3>
+                    <p className={styles.stepDescription}>
+                      Colocar a mão na massa é o que amamos fazer!
+                    </p>
+                  </div>
+                  <div className={styles.step}>
+                    <UserCheck className={styles.stepIcon} />
+                    <h3 className={styles.stepTitle}>Acompanhamento</h3>
+                    <p className={styles.stepDescription}>
+                      Estaremos em contato durante todo o projeto para te
+                      entregar nossa qualidade de ponta!
+                    </p>
+                  </div>
+                </div>
+              </AnimatedBoxEnter>
+            </div>
+            <div className={styles.processArrows}>
+              <Image
+                className={styles.arrows}
+                src={arrowCurved}
+                alt="Seta curva decorativa"
+              />
+              <Image
+                className={styles.arrows}
+                src={arrow}
+                alt="Seta decorativa"
+              />
+            </div>
+            {/* Etapa Contratual */}
+            <AnimatedBoxEnter
+              className={styles.processColumnRight}
+              delayTime={0.5}
+            >
+              <Image
+                className={styles.processCamera}
+                src={camera}
+                width={340}
+                height={340}
+                alt="Seta decorativa"
+              />
+              <div className={styles.cardProcess}>
+                <h2>Etapa Contratual</h2>
+                <Image
+                  className={styles.ProcessStepIcon}
+                  src={ProcessStepIcon}
+                  alt="Seta curva decorativa"
+                />
+                <div className={styles.stepContainer}>
+                  <div className={styles.step}>
+                    <FileSignature className={styles.stepIcon} />
+                    <h3 className={styles.stepTitle}>Proposta</h3>
+                    <p className={styles.stepDescription}>
+                      Hora de apresentar uma proposta exclusiva para você com os
+                      nossos serviços!
+                    </p>
+                  </div>
+                  <div className={styles.step}>
+                    <FileText className={styles.stepIcon} />
+                    <h3 className={styles.stepTitle}>Contrato</h3>
+                    <p className={styles.stepDescription}>
+                      Aqui vamos oficializar nossa parceria de maneira formal!
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </AnimatedBoxEnter>
+          </div>
+        </section>
+      </div>
+
+      <div className="block 2lg:hidden">
+        {/* Mobile */}
+        <section id="Processos" className={styles.processContainer}>
+          <div className={styles.processTitle}>
+            <h1 className={`${playfairDisplay.className}`}>
+              Nossos processos
+              <Image
+                className={styles.appProcessStribble}
+                src={orangeLine}
+                alt="Risco de decoração do titulo."
+              />
+            </h1>
+            <p>Alguns dos nossos casos projetos realizados.</p>
+          </div>
           <div className={styles.processColumn}>
             {/* Etapa Inicial */}
 
@@ -279,6 +404,45 @@ export default function Home() {
                 </div>
               </div>
             </AnimatedBoxEnter>
+            {/* Etapa Contratual */}
+            <AnimatedBoxEnter
+              className={styles.processColumnRight}
+              delayTime={0.5}
+            >
+              <Image
+                className={styles.processCamera}
+                src={camera}
+                width={340}
+                height={340}
+                alt="Seta decorativa"
+              />
+              <div className={styles.cardProcess}>
+                <h2>Etapa Contratual</h2>
+                <Image
+                  className={styles.ProcessStepIcon}
+                  src={ProcessStepIcon}
+                  alt="Seta curva decorativa"
+                />
+                <div className={styles.stepContainer}>
+                  <div className={styles.step}>
+                    <FileSignature className={styles.stepIcon} />
+                    <h3 className={styles.stepTitle}>Proposta</h3>
+                    <p className={styles.stepDescription}>
+                      Hora de apresentar uma proposta exclusiva para você com os
+                      nossos serviços!
+                    </p>
+                  </div>
+                  <div className={styles.step}>
+                    <FileText className={styles.stepIcon} />
+                    <h3 className={styles.stepTitle}>Contrato</h3>
+                    <p className={styles.stepDescription}>
+                      Aqui vamos oficializar nossa parceria de maneira formal!
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </AnimatedBoxEnter>
+
             {/* Etapa Iris */}
             <AnimatedBoxEnter className={styles.cardProcess} delayTime={1}>
               <h2>Etapa Iris</h2>
@@ -318,46 +482,9 @@ export default function Home() {
               alt="Seta decorativa"
             />
           </div>
-          {/* Etapa Contratual */}
-          <AnimatedBoxEnter
-            className={styles.processColumnRight}
-            delayTime={0.5}
-          >
-            <Image
-              className={styles.processCamera}
-              src={camera}
-              width={340}
-              height={340}
-              alt="Seta decorativa"
-            />
-            <div className={styles.cardProcess}>
-              <h2>Etapa Contratual</h2>
-              <Image
-                className={styles.ProcessStepIcon}
-                src={ProcessStepIcon}
-                alt="Seta curva decorativa"
-              />
-              <div className={styles.stepContainer}>
-                <div className={styles.step}>
-                  <FileSignature className={styles.stepIcon} />
-                  <h3 className={styles.stepTitle}>Proposta</h3>
-                  <p className={styles.stepDescription}>
-                    Hora de apresentar uma proposta exclusiva para você com os
-                    nossos serviços!
-                  </p>
-                </div>
-                <div className={styles.step}>
-                  <FileText className={styles.stepIcon} />
-                  <h3 className={styles.stepTitle}>Contrato</h3>
-                  <p className={styles.stepDescription}>
-                    Aqui vamos oficializar nossa parceria de maneira formal!
-                  </p>
-                </div>
-              </div>
-            </div>
-          </AnimatedBoxEnter>
-        </div>
-      </section>
+        </section>
+      </div>
+
       {/* Formulário de contato */}
       <section id="Contato" className={styles.formContactContainer}>
         <div className={styles.formContactTitle}>

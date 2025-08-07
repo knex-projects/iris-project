@@ -78,6 +78,10 @@
 }
 
 @media (max-width: 1023px) {
+.headerContainer {
+  height: 5.5rem;
+}
+
   .navText {
     display: flex;
     align-items: center;
